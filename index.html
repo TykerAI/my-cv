@@ -3,165 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Châu Anh Dũng | Cybersecurity & AI Developer</title>
-    <meta name="description" content="Cybersecurity enthusiast & AI developer from Vietnam. Ethical hacking, penetration testing, and machine learning projects.">
-    <meta name="keywords" content="cybersecurity, ethical hacking, AI developer, Vietnam, penetration testing, machine learning">
+    <title>Chau Anh Dung | Cyber Security Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:wght@400;700&display=swap');
+        
         :root {
-            --neon-green: #00ff00;
+            --neon-blue: #0ff0fc;
+            --neon-pink: #ff2ced;
             --neon-purple: #9d00ff;
-            --neon-red: #ff0033;
-            --dark-bg: #0a0a0a;
-            --darker-bg: #050505;
-            --card-bg: #111111;
+            --dark-bg: #0a0a12;
+            --darker-bg: #050508;
+            --terminal-green: #00ff41;
         }
         
         body {
-            font-family: 'Space Mono', monospace;
-            background-color: var(--dark-bg);
-            color: white;
-            overflow-x: hidden;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #050505 0%, #0a0a0a 50%, #111111 100%);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-        }
-        
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        .tech-font {
             font-family: 'Share Tech Mono', monospace;
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
         
-        .neon-green {
-            color: var(--neon-green);
-            text-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green);
+        .neon-text-blue {
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
         }
         
-        .neon-purple {
+        .neon-text-pink {
+            color: var(--neon-pink);
+            text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink);
+        }
+        
+        .neon-text-purple {
             color: var(--neon-purple);
             text-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple);
         }
         
-        .neon-red {
-            color: var(--neon-red);
-            text-shadow: 0 0 5px var(--neon-red), 0 0 10px var(--neon-red);
+        .neon-border-blue {
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue), inset 0 0 10px var(--neon-blue);
         }
         
-        .neon-border-green {
-            border: 1px solid var(--neon-green);
-            box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green);
+        .neon-border-pink {
+            border: 1px solid var(--neon-pink);
+            box-shadow: 0 0 10px var(--neon-pink), inset 0 0 10px var(--neon-pink);
         }
         
         .neon-border-purple {
             border: 1px solid var(--neon-purple);
-            box-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple);
+            box-shadow: 0 0 10px var(--neon-purple), inset 0 0 10px var(--neon-purple);
         }
         
-        .neon-border-red {
-            border: 1px solid var(--neon-red);
-            box-shadow: 0 0 5px var(--neon-red), 0 0 10px var(--neon-red);
+        .glow-hover:hover {
+            text-shadow: 0 0 10px currentColor;
         }
         
-        .neon-hover-green:hover {
-            color: var(--neon-green);
-            text-shadow: 0 0 5px var(--neon-green);
+        .terminal-text {
+            color: var(--terminal-green);
+            font-family: 'Ubuntu Mono', monospace;
         }
         
-        .neon-hover-purple:hover {
-            color: var(--neon-purple);
-            text-shadow: 0 0 5px var(--neon-purple);
-        }
-        
-        .neon-hover-red:hover {
-            color: var(--neon-red);
-            text-shadow: 0 0 5px var(--neon-red);
-        }
-        
-        .card-bg {
-            background-color: var(--card-bg);
-            border-radius: 8px;
-        }
-        
-        .glow-green {
-            animation: glow-green 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes glow-green {
-            from {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--neon-green), 0 0 20px var(--neon-green);
-            }
-            to {
-                text-shadow: 0 0 10px #fff, 0 0 15px var(--neon-green), 0 0 20px var(--neon-green), 0 0 25px var(--neon-green);
-            }
-        }
-        
-        .glow-purple {
-            animation: glow-purple 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes glow-purple {
-            from {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--neon-purple), 0 0 20px var(--neon-purple);
-            }
-            to {
-                text-shadow: 0 0 10px #fff, 0 0 15px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 25px var(--neon-purple);
-            }
-        }
-        
-        .glow-red {
-            animation: glow-red 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes glow-red {
-            from {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--neon-red), 0 0 20px var(--neon-red);
-            }
-            to {
-                text-shadow: 0 0 10px #fff, 0 0 15px var(--neon-red), 0 0 20px var(--neon-red), 0 0 25px var(--neon-red);
-            }
-        }
-        
-        .typing {
-            width: 30ch;
-            white-space: nowrap;
+        .cyberpunk-btn {
+            position: relative;
             overflow: hidden;
-            border-right: 3px solid var(--neon-green);
+            transition: all 0.3s;
+            z-index: 1;
         }
         
-        .skill-bar {
-            height: 8px;
-            background-color: #333;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .skill-progress-green {
+        .cyberpunk-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, var(--neon-green), #00b4d8);
-            border-radius: 4px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+            transition: 0.5s;
+            z-index: -1;
         }
         
-        .skill-progress-purple {
-            height: 100%;
-            background: linear-gradient(90deg, var(--neon-purple), #9d00ff);
-            border-radius: 4px;
+        .cyberpunk-btn:hover::before {
+            left: 100%;
         }
         
-        .skill-progress-red {
+        .scanline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, var(--neon-red), #ff0033);
-            border-radius: 4px;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.03) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            background-size: 100% 8px;
+            pointer-events: none;
+            animation: scanline 8s linear infinite;
+            z-index: 9999;
+            opacity: 0.15;
+        }
+        
+        @keyframes scanline {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 0 100vh;
+            }
+        }
+        
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(10, 10, 18, 0.9) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(10, 10, 18, 0.9) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .typing-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 24px;
+            background-color: var(--terminal-green);
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .section-title:hover::after {
+            transform: scaleX(1);
         }
         
         .nav-link {
@@ -171,11 +167,11 @@
         .nav-link::after {
             content: '';
             position: absolute;
-            width: 0;
-            height: 2px;
             bottom: -2px;
             left: 0;
-            background-color: var(--neon-green);
+            width: 0;
+            height: 1px;
+            background-color: var(--neon-blue);
             transition: width 0.3s ease;
         }
         
@@ -183,868 +179,809 @@
             width: 100%;
         }
         
-        .grid-pattern {
-            background-image: 
-                linear-gradient(rgba(0, 255, 0, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px);
-            background-size: 30px 30px;
+        .skill-bar {
+            height: 8px;
+            background-color: var(--darker-bg);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+            position: relative;
+            transition: width 1s ease;
+        }
+        
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, 
+                rgba(255,255,255,0.1) 0%, 
+                rgba(255,255,255,0.3) 50%, 
+                rgba(255,255,255,0.1) 100%);
+            background-size: 200% 100%;
+            animation: shine 2s infinite;
+        }
+        
+        @keyframes shine {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        .project-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            perspective: 1000px;
         }
         
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2);
+            transform: translateY(-10px) scale(1.02);
         }
         
-        .contact-input {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 255, 0, 0.2);
-            transition: all 0.3s ease;
+        .project-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
         }
         
-        .contact-input:focus {
-            border-color: var(--neon-green);
-            box-shadow: 0 0 5px var(--neon-green);
-            background-color: rgba(0, 255, 0, 0.05);
+        .project-card:hover .project-card-inner {
+            transform: rotateY(10deg);
         }
         
-        .btn-neon-green {
-            background: transparent;
-            border: 1px solid var(--neon-green);
-            color: var(--neon-green);
-            transition: all 0.3s ease;
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
         }
         
-        .btn-neon-green:hover {
-            background: var(--neon-green);
-            color: black;
-            box-shadow: 0 0 10px var(--neon-green), 0 0 20px var(--neon-green);
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
         }
         
-        .btn-neon-purple {
-            background: transparent;
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 20px;
+            width: 1px;
+            height: calc(100% - 15px);
+            background-color: var(--neon-blue);
+        }
+        
+        .timeline-item:last-child::after {
+            display: none;
+        }
+        
+        .input-field {
+            background-color: rgba(10, 10, 18, 0.7);
             border: 1px solid var(--neon-purple);
-            color: var(--neon-purple);
-            transition: all 0.3s ease;
+            transition: all 0.3s;
         }
         
-        .btn-neon-purple:hover {
-            background: var(--neon-purple);
-            color: white;
-            box-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple);
+        .input-field:focus {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
+            outline: none;
         }
         
-        .scroll-indicator {
-            animation: bounce 2s infinite;
+        .social-icon {
+            transition: all 0.3s;
         }
         
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-20px);
-            }
-            60% {
-                transform: translateY(-10px);
-            }
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.2);
+            filter: drop-shadow(0 0 5px currentColor);
         }
         
-        /* Matrix effect */
-        .matrix-bg {
+        .matrix-rain {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
-            opacity: 0.1;
-            pointer-events: none;
+            opacity: 0.05;
         }
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .typing {
-                width: 100%;
-                white-space: normal;
-                border-right: none;
+            .hero-text {
+                font-size: 1.5rem;
             }
-        }
-        
-        /* Terminal window style */
-        .terminal {
-            background-color: rgba(0, 0, 0, 0.8);
-            border: 1px solid var(--neon-green);
-            border-radius: 5px;
-            padding: 15px;
-            font-family: 'Share Tech Mono', monospace;
-            position: relative;
-        }
-        
-        .terminal-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid var(--neon-green);
-        }
-        
-        .terminal-btn {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 5px;
-        }
-        
-        .terminal-btn.red { background-color: #ff5f56; }
-        .terminal-btn.yellow { background-color: #ffbd2e; }
-        .terminal-btn.green { background-color: #27c93f; }
-        
-        .terminal-title {
-            margin-left: 10px;
-            color: var(--neon-green);
-            font-size: 0.8rem;
-        }
-        
-        .terminal-body {
-            line-height: 1.5;
-        }
-        
-        .command-line {
-            display: flex;
-            margin-bottom: 5px;
-        }
-        
-        .prompt {
-            color: var(--neon-green);
-            margin-right: 10px;
-        }
-        
-        .command {
-            color: white;
-        }
-        
-        .output {
-            color: #ccc;
-            margin-left: 20px;
-        }
-        
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 15px;
-            background-color: var(--neon-green);
-            animation: blink 1s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .terminal-text {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body class="grid-pattern">
-    <!-- Matrix background effect -->
-    <canvas id="matrix" class="matrix-bg"></canvas>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix" class="matrix-rain"></canvas>
+    
+    <!-- Scanline Effect -->
+    <div class="scanline"></div>
     
     <!-- Navigation -->
-    <nav class="fixed w-full bg-black bg-opacity-90 z-50 border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <span class="text-xl font-bold neon-green tech-font">Châu Anh Dũng</span>
-                    </div>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">Châu Anh  Dũng</a>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link neon-text-blue">Home</a>
+                    <a href="#about" class="nav-link neon-text-pink">About</a>
+                    <a href="#skills" class="nav-link neon-text-purple">Skills</a>
+                    <a href="#projects" class="nav-link neon-text-blue">Projects</a>
+                    <a href="#experience" class="nav-link neon-text-pink">Experience</a>
+                    <a href="#contact" class="nav-link neon-text-purple">Contact</a>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#home" class="nav-link text-white hover:text-neon-green px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="#about" class="nav-link text-white hover:text-neon-green px-3 py-2 rounded-md text-sm font-medium">About</a>
-                        <a href="#skills" class="nav-link text-white hover:text-neon-green px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                        <a href="#projects" class="nav-link text-white hover:text-neon-green px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                        <a href="#experience" class="nav-link text-white hover:text-neon-green px-3 py-2 rounded-md text-sm font-medium">Experience</a>
-                        <a href="#contact" class="nav-link text-white hover:text-neon-green px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button class="mobile-menu-button p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-xl neon-text-blue">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-        </div>
-        
-        <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden bg-black bg-opacity-95">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-neon-green">Home</a>
-                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-neon-green">About</a>
-                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-neon-green">Skills</a>
-                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-neon-green">Projects</a>
-                <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-neon-green">Experience</a>
-                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-neon-green">Contact</a>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+                <a href="#home" class="block nav-link neon-text-blue">Home</a>
+                <a href="#about" class="block nav-link neon-text-pink">About</a>
+                <a href="#skills" class="block nav-link neon-text-purple">Skills</a>
+                <a href="#projects" class="block nav-link neon-text-blue">Projects</a>
+                <a href="#experience" class="block nav-link neon-text-pink">Experience</a>
+                <a href="#contact" class="block nav-link neon-text-purple">Contact</a>
             </div>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-90"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center" data-aos="fade-up">
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center">
             <div class="mb-8">
-                <div class="w-40 h-40 mx-auto rounded-full border-4 border-neon-green overflow-hidden glow-green">
-                    <img src="avatar.jpg" alt="Châu Anh Dũng" class="w-full h-full object-cover">
+                <div class="inline-block px-4 py-2 neon-border-blue mb-6">
+                    <span class="terminal-text">Welcome to my CV</span>
                 </div>
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 neon-green tech-font">CHÂU ANH DŨNG</h1>
-            <div class="text-xl md:text-2xl mb-4 tech-font neon-purple">Cybersecurity Enthusiast & Ethical Hacker</div>
-            <div id="typed" class="text-lg md:text-xl mb-8 mx-auto tech-font neon-green"></div>
-            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8">Building secure systems and intelligent solutions at the intersection of cybersecurity and artificial intelligence.</p>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 neon-text-blue">
+                <span id="typing-text"></span><span class="typing-cursor"></span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-8 terminal-text">
+                Cybersecurity Specialist | Ethical Hacker | Penetration Tester
+            </p>
+            
             <div class="flex justify-center space-x-4">
-                <a href="#contact" class="btn-neon-green px-6 py-3 rounded-md font-medium">Hire Me</a>
-                <a href="#" class="btn-neon-purple px-6 py-3 rounded-md font-medium" id="download-cv">Download CV</a>
+                <a href="#contact" class="cyberpunk-btn px-6 py-3 neon-border-blue neon-text-blue hover:bg-blue-900 hover:bg-opacity-20 transition duration-300">
+                    Contact Me
+                </a>
+                <a href="#projects" class="cyberpunk-btn px-6 py-3 neon-border-pink neon-text-pink hover:bg-pink-900 hover:bg-opacity-20 transition duration-300">
+                    View Projects
+                </a>
             </div>
             
-            <div class="mt-20 scroll-indicator">
-                <a href="#about" class="text-gray-400 hover:text-neon-green">
-                    <i class="fas fa-chevron-down text-2xl"></i>
+            <div class="mt-16 animate-bounce">
+                <a href="#about" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fas fa-chevron-down text-3xl"></i>
                 </a>
             </div>
         </div>
+        
+        <!-- Floating cyberpunk elements -->
+        <div class="absolute top-20 left-20 w-4 h-4 rounded-full bg-blue-500 opacity-70 animate-pulse"></div>
+        <div class="absolute bottom-32 right-32 w-6 h-6 rounded-full bg-purple-500 opacity-70 animate-ping"></div>
+        <div class="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-pink-500 opacity-70 animate-pulse"></div>
     </section>
-
+    
     <!-- About Section -->
-    <section id="about" class="py-20 bg-black bg-opacity-70">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-green tech-font">ABOUT ME</h2>
-                <div class="w-20 h-1 bg-neon-green mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-3xl mx-auto">Who I am and what I do</p>
-            </div>
+    <section id="about" class="py-20 bg-black bg-opacity-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 section-title neon-text-blue">
+                <span class="terminal-text">$</span> About Me
+            </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="terminal" data-aos="fade-right">
-                    <div class="terminal-header">
-                        <div class="terminal-btn red"></div>
-                        <div class="terminal-btn yellow"></div>
-                        <div class="terminal-btn green"></div>
-                        <div class="terminal-title">user@chauanhdung:~</div>
+                <div class="relative">
+                    <div class="w-64 h-64 mx-auto neon-border-purple rounded-full overflow-hidden p-1">
+                        <img src="https://via.placeholder.com/256" alt="Chau Anh Dung" class="w-full h-full object-cover rounded-full">
                     </div>
-                    <div class="terminal-body">
-                        <div class="command-line">
-                            <span class="prompt">$</span>
-                            <span class="command">whoami</span>
-                        </div>
-                        <div class="output">
-                            Châu Anh Dũng<br>
-                            Cybersecurity Specialist & AI Developer<br>
-                            From: Hanoi, Vietnam<br>
-                            Education: Duy Tan University<br>
-                            Interests: Ethical Hacking, AI, Network Security
-                        </div>
-                        
-                        <div class="command-line">
-                            <span class="prompt">$</span>
-                            <span class="command">cat bio.txt</span>
-                        </div>
-                        <div class="output">
-                            I'm a cybersecurity enthusiast with a passion for ethical hacking and AI development.<br><br>
-                            
-                            Currently studying at Duy Tan University, I specialize in penetration testing, vulnerability assessment, and secure system design. My journey in cybersecurity began with a fascination for how systems can be protected and exploited, leading me to pursue certifications and participate in various wargames and CTF competitions.<br><br>
-                            
-                            As a white hat hacker, I believe in using my skills to improve security rather than exploit vulnerabilities. I'm particularly interested in how artificial intelligence can be applied to enhance cybersecurity measures and automate threat detection.
-                        </div>
-                        
-                        <div class="command-line">
-                            <span class="prompt">$</span>
-                            <span class="command"><span class="cursor"></span></span>
-                        </div>
+                    <div class="absolute -bottom-5 -right-5 neon-border-blue bg-black px-4 py-2 rounded">
+                        <span class="terminal-text">Security Expert</span>
                     </div>
                 </div>
                 
-                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
-                    <div class="card-bg p-6 border border-gray-800 hover:neon-border-green transition-all duration-300">
-                        <div class="neon-green mb-3">
-                            <i class="fas fa-shield-alt text-3xl"></i>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 neon-text-pink">Chau Anh Dung</h3>
+                    <p class="text-gray-300 mb-6">
+                        I'm a cybersecurity specialist with over 5 years of experience in penetration testing, vulnerability assessment, and security architecture design. My mission is to protect digital assets and help organizations build secure systems.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <p class="text-gray-400"><span class="neon-text-blue">Name:</span> Chau Anh Dung</p>
+                            <p class="text-gray-400"><span class="neon-text-blue">Email:</span> contact@chauanhdung.id.vn</p>
                         </div>
-                        <h4 class="font-bold mb-2">Ethical Hacking</h4>
-                        <p class="text-sm text-gray-400">Penetration testing, vulnerability assessment, and secure system design.</p>
-                    </div>
-                    <div class="card-bg p-6 border border-gray-800 hover:neon-border-purple transition-all duration-300">
-                        <div class="neon-purple mb-3">
-                            <i class="fas fa-brain text-3xl"></i>
+                        <div>
+                            <p class="text-gray-400"><span class="neon-text-blue">From:</span> Vietnam</p>
+                            <p class="text-gray-400"><span class="neon-text-blue">Certifications:</span> OSCP, CEH, CISSP</p>
                         </div>
-                        <h4 class="font-bold mb-2">AI/ML</h4>
-                        <p class="text-sm text-gray-400">Machine learning models for threat detection and security automation.</p>
                     </div>
-                    <div class="card-bg p-6 border border-gray-800 hover:neon-border-green transition-all duration-300">
-                        <div class="neon-green mb-3">
-                            <i class="fab fa-python text-3xl"></i>
-                        </div>
-                        <h4 class="font-bold mb-2">Python</h4>
-                        <p class="text-sm text-gray-400">Scripting, automation, and development of security tools.</p>
-                    </div>
-                    <div class="card-bg p-6 border border-gray-800 hover:neon-border-red transition-all duration-300">
-                        <div class="neon-red mb-3">
-                            <i class="fas fa-network-wired text-3xl"></i>
-                        </div>
-                        <h4 class="font-bold mb-2">Networking</h4>
-                        <p class="text-sm text-gray-400">Network architecture, protocols, and security implementations.</p>
-                    </div>
+                    
+                    <a href="#" class="inline-block px-6 py-3 neon-border-blue neon-text-blue hover:bg-blue-900 hover:bg-opacity-20 transition duration-300">
+                        Download CV <i class="fas fa-download ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-black bg-opacity-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-green tech-font">TECHNICAL SKILLS</h2>
-                <div class="w-20 h-1 bg-neon-green mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-3xl mx-auto">My expertise and technical capabilities</p>
-            </div>
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 section-title neon-text-pink">
+                <span class="terminal-text">$</span> Technical Skills
+            </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div data-aos="fade-right">
-                    <h3 class="text-xl font-bold mb-6 neon-green">Cybersecurity Skills</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-6 neon-text-blue">Security Skills</h3>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span>Penetration Testing</span>
-                            <span>90%</span>
+                            <span class="terminal-text">Penetration Testing</span>
+                            <span class="terminal-text">95%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress-green" style="width: 90%"></div>
+                            <div class="skill-progress" style="width: 95%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span>Vulnerability Assessment</span>
-                            <span>85%</span>
+                            <span class="terminal-text">Vulnerability Assessment</span>
+                            <span class="terminal-text">90%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress-green" style="width: 85%"></div>
+                            <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span>Security Architecture</span>
-                            <span>80%</span>
+                            <span class="terminal-text">Network Security</span>
+                            <span class="terminal-text">88%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress-green" style="width: 80%"></div>
+                            <div class="skill-progress" style="width: 88%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span>Incident Response</span>
-                            <span>75%</span>
+                            <span class="terminal-text">Cryptography</span>
+                            <span class="terminal-text">85%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress-green" style="width: 75%"></div>
+                            <div class="skill-progress" style="width: 85%"></div>
                         </div>
                     </div>
                 </div>
                 
-                <div data-aos="fade-left">
-                    <h3 class="text-xl font-bold mb-6 neon-purple">Programming & Tools</h3>
+                <div>
+                    <h3 class="text-xl font-bold mb-6 neon-text-purple">Technical Skills</h3>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span>Python</span>
-                            <span>95%</span>
+                            <span class="terminal-text">Python</span>
+                            <span class="terminal-text">92%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress-purple" style="width: 95%"></div>
+                            <div class="skill-progress" style="width: 92%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span>Machine Learning</span>
-                            <span>85%</span>
+                            <span class="terminal-text">Linux</span>
+                            <span class="terminal-text">90%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress-purple" style="width: 85%"></div>
+                            <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span>Linux/Unix</span>
-                            <span>90%</span>
+                            <span class="terminal-text">Metasploit</span>
+                            <span class="terminal-text">88%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress-purple" style="width: 90%"></div>
+                            <div class="skill-progress" style="width: 88%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span>C/C++</span>
-                            <span>70%</span>
+                            <span class="terminal-text">Burp Suite</span>
+                            <span class="terminal-text">85%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress-purple" style="width: 70%"></div>
+                            <div class="skill-progress" style="width: 85%"></div>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
-                <div class="card-bg p-4 text-center hover:neon-border-green transition-all duration-300">
-                    <i class="fab fa-python text-4xl neon-green mb-2"></i>
-                    <p>Python</p>
-                </div>
-                <div class="card-bg p-4 text-center hover:neon-border-green transition-all duration-300">
-                    <i class="fab fa-linux text-4xl neon-green mb-2"></i>
-                    <p>Linux</p>
-                </div>
-                <div class="card-bg p-4 text-center hover:neon-border-green transition-all duration-300">
-                    <i class="fas fa-terminal text-4xl neon-green mb-2"></i>
-                    <p>Kali Linux</p>
-                </div>
-                <div class="card-bg p-4 text-center hover:neon-border-green transition-all duration-300">
-                    <i class="fas fa-network-wired text-4xl neon-green mb-2"></i>
-                    <p>Networking</p>
-                </div>
-                <div class="card-bg p-4 text-center hover:neon-border-purple transition-all duration-300">
-                    <i class="fab fa-github text-4xl neon-purple mb-2"></i>
-                    <p>GitHub</p>
-                </div>
-                <div class="card-bg p-4 text-center hover:neon-border-purple transition-all duration-300">
-                    <i class="fas fa-server text-4xl neon-purple mb-2"></i>
-                    <p>Cloudflare</p>
-                </div>
-                <div class="card-bg p-4 text-center hover:neon-border-purple transition-all duration-300">
-                    <i class="fas fa-code text-4xl neon-purple mb-2"></i>
-                    <p>C/C++</p>
-                </div>
-                <div class="card-bg p-4 text-center hover:neon-border-purple transition-all duration-300">
-                    <i class="fas fa-robot text-4xl neon-purple mb-2"></i>
-                    <p>AI/ML</p>
+            <div class="mt-12">
+                <h3 class="text-xl font-bold mb-6 neon-text-blue">Security Tools</h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="p-4 neon-border-purple rounded-lg text-center hover:bg-purple-900 hover:bg-opacity-20 transition duration-300">
+                        <i class="fas fa-shield-alt text-4xl neon-text-blue mb-2"></i>
+                        <p class="terminal-text">Kali Linux</p>
+                    </div>
+                    <div class="p-4 neon-border-blue rounded-lg text-center hover:bg-blue-900 hover:bg-opacity-20 transition duration-300">
+                        <i class="fas fa-bug text-4xl neon-text-pink mb-2"></i>
+                        <p class="terminal-text">Metasploit</p>
+                    </div>
+                    <div class="p-4 neon-border-pink rounded-lg text-center hover:bg-pink-900 hover:bg-opacity-20 transition duration-300">
+                        <i class="fas fa-network-wired text-4xl neon-text-purple mb-2"></i>
+                        <p class="terminal-text">Wireshark</p>
+                    </div>
+                    <div class="p-4 neon-border-purple rounded-lg text-center hover:bg-purple-900 hover:bg-opacity-20 transition duration-300">
+                        <i class="fas fa-lock text-4xl neon-text-blue mb-2"></i>
+                        <p class="terminal-text">Burp Suite</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-black bg-opacity-70">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-green tech-font">RECENT PROJECTS</h2>
-                <div class="w-20 h-1 bg-neon-green mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-3xl mx-auto">Some of my notable work and contributions</p>
-            </div>
+    <section id="projects" class="py-20 bg-black bg-opacity-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 section-title neon-text-purple">
+                <span class="terminal-text">$</span> My Projects
+            </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card card-bg p-6 rounded-lg transition-all duration-300" data-aos="zoom-in">
-                    <div class="mb-4">
-                        <div class="w-full h-40 bg-gray-800 rounded-md overflow-hidden">
-                            <img src="https://via.placeholder.com/600x400.png?text=AI+Threat+Detection" alt="AI Threat Detection" class="w-full h-full object-cover">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-card-inner neon-border-blue rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold neon-text-blue">Vulnerability Scanner</h3>
+                                <span class="terminal-text">2023</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Automated vulnerability scanner that identifies security weaknesses in web applications and networks.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Python</span>
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Security</span>
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Automation</span>
+                            </div>
+                            <a href="#" class="terminal-text hover:underline">View Project <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 neon-green">AI-Powered Threat Detection</h3>
-                    <p class="text-gray-400 mb-4">Machine learning system that detects anomalies and potential threats in network traffic in real-time.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Python</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">TensorFlow</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Network Security</span>
-                    </div>
-                    <a href="#" class="neon-green hover:underline">View on GitHub →</a>
                 </div>
                 
-                <div class="project-card card-bg p-6 rounded-lg transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="mb-4">
-                        <div class="w-full h-40 bg-gray-800 rounded-md overflow-hidden">
-                            <img src="https://via.placeholder.com/600x400.png?text=Secure+Chat" alt="Secure Chat" class="w-full h-full object-cover">
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-card-inner neon-border-pink rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold neon-text-pink">PenTest Framework</h3>
+                                <span class="terminal-text">2022</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Custom penetration testing framework with modular architecture for security assessments.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Ruby</span>
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Metasploit</span>
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Security</span>
+                            </div>
+                            <a href="#" class="terminal-text hover:underline">View Project <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 neon-purple">End-to-End Encrypted Chat</h3>
-                    <p class="text-gray-400 mb-4">A secure messaging platform with military-grade encryption and self-destructing messages.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Python</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Cryptography</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">WebSockets</span>
-                    </div>
-                    <a href="#" class="neon-purple hover:underline">View on GitHub →</a>
                 </div>
                 
-                <div class="project-card card-bg p-6 rounded-lg transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="mb-4">
-                        <div class="w-full h-40 bg-gray-800 rounded-md overflow-hidden">
-                            <img src="https://via.placeholder.com/600x400.png?text=Network+Scanner" alt="Network Scanner" class="w-full h-full object-cover">
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-card-inner neon-border-purple rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold neon-text-purple">Secure Auth System</h3>
+                                <span class="terminal-text">2021</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Multi-factor authentication system with biometric verification and hardware tokens.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Node.js</span>
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Security</span>
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Auth</span>
+                            </div>
+                            <a href="#" class="terminal-text hover:underline">View Project <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 neon-red">Advanced Network Scanner</h3>
-                    <p class="text-gray-400 mb-4">Comprehensive network scanning tool that identifies devices, services, and vulnerabilities.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Python</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Scapy</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Networking</span>
-                    </div>
-                    <a href="#" class="neon-red hover:underline">View on GitHub →</a>
                 </div>
                 
-                <div class="project-card card-bg p-6 rounded-lg transition-all duration-300" data-aos="zoom-in">
-                    <div class="mb-4">
-                        <div class="w-full h-40 bg-gray-800 rounded-md overflow-hidden">
-                            <img src="https://via.placeholder.com/600x400.png?text=Password+Manager" alt="Password Manager" class="w-full h-full object-cover">
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-card-inner neon-border-blue rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold neon-text-blue">Network Monitor</h3>
+                                <span class="terminal-text">2020</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Real-time network monitoring tool with anomaly detection and alerting system.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Python</span>
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Networking</span>
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Security</span>
+                            </div>
+                            <a href="#" class="terminal-text hover:underline">View Project <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 neon-green">Secure Password Manager</h3>
-                    <p class="text-gray-400 mb-4">Offline password manager with biometric authentication and zero-knowledge encryption.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Python</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Cryptography</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">SQLite</span>
-                    </div>
-                    <a href="#" class="neon-green hover:underline">View on GitHub →</a>
                 </div>
                 
-                <div class="project-card card-bg p-6 rounded-lg transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="mb-4">
-                        <div class="w-full h-40 bg-gray-800 rounded-md overflow-hidden">
-                            <img src="https://via.placeholder.com/600x400.png?text=Malware+Analysis" alt="Malware Analysis" class="w-full h-full object-cover">
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-card-inner neon-border-pink rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold neon-text-pink">Malware Analysis</h3>
+                        <span class="terminal-text">2019</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Automated malware analysis sandbox with behavior analysis and reporting.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Python</span>
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Security</span>
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Malware</span>
+                            </div>
+                            <a href="#" class="terminal-text hover:underline">View Project <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 neon-purple">Automated Malware Analysis</h3>
-                    <p class="text-gray-400 mb-4">Sandbox environment for analyzing suspicious files with behavioral analysis and AI detection.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Python</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Docker</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Machine Learning</span>
-                    </div>
-                    <a href="#" class="neon-purple hover:underline">View on GitHub →</a>
                 </div>
                 
-                <div class="project-card card-bg p-6 rounded-lg transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="mb-4">
-                        <div class="w-full h-40 bg-gray-800 rounded-md overflow-hidden">
-                            <img src="https://via.placeholder.com/600x400.png?text=VPN+Tool" alt="VPN Tool" class="w-full h-full object-cover">
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-card-inner neon-border-purple rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold neon-text-purple">Security Training</h3>
+                                <span class="terminal-text">2018</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Interactive cybersecurity training platform with hands-on labs and challenges.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Web</span>
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Education</span>
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Security</span>
+                            </div>
+                            <a href="#" class="terminal-text hover:underline">View Project <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 neon-red">Custom VPN Implementation</h3>
-                    <p class="text-gray-400 mb-4">Lightweight VPN solution with custom protocols and obfuscation techniques.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Python</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Networking</span>
-                        <span class="text-xs px-2 py-1 bg-gray-800 rounded-full">Cryptography</span>
-                    </div>
-                    <a href="#" class="neon-red hover:underline">View on GitHub →</a>
                 </div>
-            </div>
-            
-            <div class="text-center mt-12" data-aos="fade-up">
-                <a href="#" class="btn-neon-green px-6 py-3 rounded-md font-medium">View All Projects</a>
             </div>
         </div>
     </section>
-
+    
     <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-black bg-opacity-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-green tech-font">EXPERIENCE & EDUCATION</h2>
-                <div class="w-20 h-1 bg-neon-green mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-3xl mx-auto">My professional journey and academic background</p>
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 section-title neon-text-blue">
+                <span class="terminal-text">$</span> Experience
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-6 neon-text-pink">Work Experience</h3>
+                    
+                    <div class="timeline">
+                        <!-- Experience 1 -->
+                        <div class="timeline-item">
+                            <div class="neon-border-blue bg-black bg-opacity-50 p-6 rounded-lg">
+                                <h4 class="text-lg font-bold neon-text-blue mb-2">Senior Security Consultant</h4>
+                                <p class="terminal-text mb-2">CyberSec Solutions | 2021 - Present</p>
+                                <p class="text-gray-300">
+                                    Lead penetration testing team, conduct security assessments, and design secure architectures for enterprise clients.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience 2 -->
+                        <div class="timeline-item">
+                            <div class="neon-border-pink bg-black bg-opacity-50 p-6 rounded-lg">
+                                <h4 class="text-lg font-bold neon-text-pink mb-2">Security Engineer</h4>
+                                <p class="terminal-text mb-2">SecureNet Inc. | 2018 - 2021</p>
+                                <p class="text-gray-300">
+                                    Performed vulnerability assessments, developed security tools, and responded to security incidents.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Experience 3 -->
+                        <div class="timeline-item">
+                            <div class="neon-border-purple bg-black bg-opacity-50 p-6 rounded-lg">
+                                <h4 class="text-lg font-bold neon-text-purple mb-2">Junior Penetration Tester</h4>
+                                <p class="terminal-text mb-2">HackShield | 2016 - 2018</p>
+                                <p class="text-gray-300">
+                                    Conducted web application penetration tests and security code reviews under supervision.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 neon-text-purple">Education</h3>
+                    
+                    <div class="timeline">
+                        <!-- Education 1 -->
+                        <div class="timeline-item">
+                            <div class="neon-border-blue bg-black bg-opacity-50 p-6 rounded-lg">
+                                <h4 class="text-lg font-bold neon-text-blue mb-2">MSc in Cybersecurity</h4>
+                                <p class="terminal-text mb-2">Vietnam National University | 2014 - 2016</p>
+                                <p class="text-gray-300">
+                                    Specialized in network security and cryptography with thesis on advanced penetration testing techniques.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Education 2 -->
+                        <div class="timeline-item">
+                            <div class="neon-border-pink bg-black bg-opacity-50 p-6 rounded-lg">
+                                <h4 class="text-lg font-bold neon-text-pink mb-2">BSc in Computer Science</h4>
+                                <p class="terminal-text mb-2">Hanoi University of Science | 2010 - 2014</p>
+                                <p class="text-gray-300">
+                                    Focused on software engineering with emphasis on secure coding practices.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Education 3 -->
+                        <div class="timeline-item">
+                            <div class="neon-border-purple bg-black bg-opacity-50 p-6 rounded-lg">
+                                <h4 class="text-lg font-bold neon-text-purple mb-2">Certifications</h4>
+                                <p class="terminal-text mb-2">Various | 2015 - Present</p>
+                                <p class="text-gray-300">
+                                    OSCP, CEH, CISSP, CompTIA Security+, and other security certifications.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-black bg-opacity-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 section-title neon-text-pink">
+                <span class="terminal-text">$</span> Contact Me
+            </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div data-aos="fade-right">
-                    <h3 class="text-xl font-bold mb-8 neon-green">Work & Training</h3>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 neon-text-blue">Get In Touch</h3>
+                    <p class="text-gray-300 mb-8">
+                        Interested in working together or have a security challenge? Feel free to reach out. I'm always open to discussing new projects, creative ideas or opportunities to be part of your security initiatives.
+                    </p>
                     
-                    <div class="relative">
-                        <!-- Timeline line -->
-                        <div class="absolute left-5 top-0 h-full w-0.5 bg-gray-700"></div>
-                        
-                        <!-- Timeline items -->
-                        <div class="relative mb-8 pl-12">
-                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-neon-green"></div>
-                            <div class="card-bg p-6 rounded-lg">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold">AI Developer Training</h4>
-                                    <span class="text-sm neon-green">2023</span>
-                                </div>
-                                <p class="text-sm text-gray-400 mb-2">Samsung Innovation Campus</p>
-                                <p class="text-sm">Completed intensive AI training program covering machine learning, deep learning, and AI applications in cybersecurity.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="relative mb-8 pl-12">
-                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-neon-green"></div>
-                            <div class="card-bg p-6 rounded-lg">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold">Cybersecurity Workshop</h4>
-                                    <span class="text-sm neon-green">2022</span>
-                                </div>
-                                <p class="text-sm text-gray-400 mb-2">VNNIC</p>
-                                <p class="text-sm">Participated in advanced cybersecurity workshop focusing on network security, DNS security, and emerging threats.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="relative mb-8 pl-12">
-                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-neon-green"></div>
-                            <div class="card-bg p-6 rounded-lg">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold">Chatbot Developer</h4>
-                                    <span class="text-sm neon-green">2021</span>
-                                </div>
-                                <p class="text-sm text-gray-400 mb-2">Freelance Project</p>
-                                <p class="text-sm">Developed AI-powered chatbot for customer service with natural language processing capabilities.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="relative pl-12">
-                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-neon-green"></div>
-                            <div class="card-bg p-6 rounded-lg">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold">Wargames & CTFs</h4>
-                                    <span class="text-sm neon-green">Ongoing</span>
-                                </div>
-                                <ul class="text-sm list-disc pl-5 space-y-1">
-                                    <li>OverTheWire: Completed Bandit, Leviathan, and Natas</li>
-                                    <li>TryHackMe: Top 5% in Vietnam, completed multiple paths</li>
-                                    <li>Participated in national CTF competitions</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div data-aos="fade-left">
-                    <h3 class="text-xl font-bold mb-8 neon-purple">Education</h3>
-                    
-                    <div class="relative">
-                        <!-- Timeline line -->
-                        <div class="absolute left-5 top-0 h-full w-0.5 bg-gray-700"></div>
-                        
-                        <!-- Timeline items -->
-                        <div class="relative mb-8 pl-12">
-                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-neon-purple"></div>
-                            <div class="card-bg p-6 rounded-lg">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold">BSc in Computer Science</h4>
-                                    <span class="text-sm neon-purple">2020 - Present</span>
-                                </div>
-                                <p class="text-sm text-gray-400 mb-2">Duy Tan University</p>
-                                <p class="text-sm">Specializing in Cybersecurity and Artificial Intelligence. Coursework includes network security, cryptography, machine learning, and ethical hacking.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="relative mb-8 pl-12">
-                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-neon-purple"></div>
-                            <div class="card-bg p-6 rounded-lg">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold">Cybersecurity Certifications</h4>
-                                    <span class="text-sm neon-purple">Ongoing</span>
-                                </div>
-                                <ul class="text-sm list-disc pl-5 space-y-1">
-                                    <li>Certified Ethical Hacker (CEH) - In Progress</li>
-                                    <li>CompTIA Security+ - Planned</li>
-                                    <li>TryHackMe Completion Certificates</li>
-                                    <li>Multiple online cybersecurity courses</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="relative pl-12">
-                            <div class="absolute left-0 top-1 w-4 h-4 rounded-full bg-neon-purple"></div>
-                            <div class="card-bg p-6 rounded-lg">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold">Technical Skills</h4>
-                                    <span class="text-sm neon-purple">Acquired</span>
-                                </div>
-                                <ul class="text-sm list-disc pl-5 space-y-1">
-                                    <li>Advanced Python programming</li>
-                                    <li>Linux system administration</li>
-                                    <li>Network penetration testing</li>
-                                    <li>Machine learning model development</li>
-                                    <li>Secure coding practices</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-black bg-opacity-70">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 neon-green tech-font">GET IN TOUCH</h2>
-                <div class="w-20 h-1 bg-neon-green mx-auto mb-6"></div>
-                <p class="text-gray-400 max-w-3xl mx-auto">Feel free to reach out for collaborations or just a friendly hello</p>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div data-aos="fade-right">
-                    <h3 class="text-xl font-bold mb-6 neon-green">Contact Information</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="neon-green mr-4 mt-1">
-                                <i class="fas fa-envelope text-xl"></i>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center neon-border-blue rounded-full mr-4">
+                                <i class="fas fa-envelope neon-text-blue"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Email</h4>
-                                <p class="text-gray-400">chauanhdung@dtu.edu.vn</p>
+                                <p class="terminal-text">Email</p>
+                                <p class="text-gray-300">contact@chauanhdung.id.vn</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
-                            <div class="neon-green mr-4 mt-1">
-                                <i class="fas fa-map-marker-alt text-xl"></i>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center neon-border-pink rounded-full mr-4">
+                                <i class="fas fa-phone neon-text-pink"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Location</h4>
-                                <p class="text-gray-400">Đà Nẵng, Việt Nam</p>
+                                <p class="terminal-text">Phone</p>
+                                <p class="text-gray-300">+84 123 456 789</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
-                            <div class="neon-green mr-4 mt-1">
-                                <i class="fas fa-globe text-xl"></i>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 flex items-center justify-center neon-border-purple rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt neon-text-purple"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Website</h4>
-                                <p class="text-gray-400">chauanhdung.id.vn</p>
+                                <p class="terminal-text">Location</p>
+                                <p class="text-gray-300">Hanoi, Vietnam</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="mt-12">
-                        <h3 class="text-xl font-bold mb-6 neon-purple">Connect With Me</h3>
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold mb-4 neon-text-purple">Follow Me</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center text-xl hover:bg-neon-green hover:text-black hover:border-neon-green transition-all duration-300">
+                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center neon-border-blue rounded-full neon-text-blue">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center text-xl hover:bg-neon-purple hover:text-white hover:border-neon-purple transition-all duration-300">
+                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center neon-border-pink rounded-full neon-text-pink">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center text-xl hover:bg-neon-red hover:text-white hover:border-neon-red transition-all duration-300">
-                                <i class="fab fa-facebook-f"></i>
+                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center neon-border-purple rounded-full neon-text-purple">
+                                <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center text-xl hover:bg-neon-green hover:text-black hover:border-neon-green transition-all duration-300">
-                                <i class="fas fa-envelope"></i>
+                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center neon-border-blue rounded-full neon-text-blue">
+                                <i class="fab fa-hacker-news"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div data-aos="fade-left">
+                <div>
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="name" class="block mb-2 text-sm font-medium">Your Name</label>
-                                <input type="text" id="name" class="contact-input w-full px-4 py-3 rounded-md focus:outline-none">
+                                <label for="name" class="block mb-2 terminal-text">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 input-field rounded focus:neon-border-blue" placeholder="Enter your name">
                             </div>
                             <div>
-                                <label for="email" class="block mb-2 text-sm font-medium">Your Email</label>
-                                <input type="email" id="email" class="contact-input w-full px-4 py-3 rounded-md focus:outline-none">
+                                <label for="email" class="block mb-2 terminal-text">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 input-field rounded focus:neon-border-pink" placeholder="Enter your email">
                             </div>
                         </div>
                         
                         <div>
-                            <label for="subject" class="block mb-2 text-sm font-medium">Subject</label>
-                            <input type="text" id="subject" class="contact-input w-full px-4 py-3 rounded-md focus:outline-none">
+                            <label for="subject" class="block mb-2 terminal-text">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 input-field rounded focus:neon-border-purple" placeholder="Enter subject">
                         </div>
                         
                         <div>
-                            <label for="message" class="block mb-2 text-sm font-medium">Message</label>
-                            <textarea id="message" rows="6" class="contact-input w-full px-4 py-3 rounded-md focus:outline-none"></textarea>
+                            <label for="message" class="block mb-2 terminal-text">Message</label>
+                            <textarea id="message" rows="6" class="w-full px-4 py-3 input-field rounded focus:neon-border-blue" placeholder="Enter your message"></textarea>
                         </div>
                         
-                        <button type="submit" class="btn-neon-green px-6 py-3 rounded-md font-medium w-full">Send Message</button>
+                        <button type="submit" class="w-full px-6 py-4 cyberpunk-btn neon-border-pink neon-text-pink hover:bg-pink-900 hover:bg-opacity-20 transition duration-300">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
-    <footer class="py-12 bg-black border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col items-center justify-center">
-                <div class="mb-8">
-                    <span class="text-xl font-bold neon-green tech-font">Châu Anh Dũng</span>
-                </div>
-                
-                <div class="flex space-x-6 mb-8">
-                    <a href="#" class="text-gray-400 hover:text-neon-green transition-colors duration-300">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-neon-purple transition-colors duration-300">
-                        <i class="fab fa-linkedin-in text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-neon-red transition-colors duration-300">
-                        <i class="fab fa-facebook-f text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-neon-green transition-colors duration-300">
-                        <i class="fas fa-envelope text-xl"></i>
-                    </a>
-                </div>
-                
-                <div class="text-center text-gray-500 text-sm">
-                    <p>&copy; 2025 Châu Anh Dũng. All rights reserved.</p>
-                    <p class="mt-2">Built with passion and <span class="neon-green">♥</span> in Đà Nẵng</p>
-                </div>
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center mb-6">
+                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">chauanhdung.id.vn</a>
             </div>
+            
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#home" class="nav-link neon-text-blue">Home</a>
+                <a href="#about" class="nav-link neon-text-pink">About</a>
+                <a href="#skills" class="nav-link neon-text-purple">Skills</a>
+                <a href="#projects" class="nav-link neon-text-blue">Projects</a>
+                <a href="#experience" class="nav-link neon-text-pink">Experience</a>
+                <a href="#contact" class="nav-link neon-text-purple">Contact</a>
+            </div>
+            
+            <p class="terminal-text">
+                &copy; 2023 Chau Anh Dung. All rights reserved. Designed with cyberpunk aesthetics.
+            </p>
         </div>
     </footer>
-
+    
+    <!-- Back to Top Button -->
+    <a href="#home" id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 flex items-center justify-center neon-border-blue rounded-full neon-text-blue bg-black bg-opacity-70 opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
     <script>
-        // Initialize AOS animation library
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+        // Typing animation
+        const typingText = document.getElementById('typing-text');
+        const phrases = [
+            "Chau Anh Dung",
+            "Security Specialist",
+            "Ethical Hacker",
+            "Penetration Tester"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isEnd = false;
         
-        // Initialize Typed.js for typing animation
-        var typed = new Typed('#typed', {
-            strings: [
-                "Penetration Tester",
-                "AI Developer",
-                "Security Researcher",
-                "Python Enthusiast",
-                "White Hat Hacker"
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true,
-            showCursor: true,
-            cursorChar: '|',
-            smartBackspace: true
-        });
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isEnd = true;
+                setTimeout(() => {
+                    isDeleting = true;
+                }, 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+            }
+            
+            const typingSpeed = isDeleting ? 50 : isEnd ? 100 : 150;
+            setTimeout(type, typingSpeed);
+            
+            if (isEnd) {
+                isEnd = false;
+            }
+        }
+        
+        // Start typing animation
+        setTimeout(type, 1000);
         
         // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
         
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
         
         // Close mobile menu when clicking on a link
-        const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
-        mobileMenuLinks.forEach(link => {
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
         
-        // Smooth scrolling for navigation links
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        // Smooth scrolling for all links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1061,85 +998,90 @@
             });
         });
         
-        // Download CV button
-        const downloadCvButton = document.getElementById('download-cv');
-        downloadCvButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            alert('Downloading CV...');
-            // In a real implementation, this would link to a PDF file
-            // window.location.href = 'path/to/cv.pdf';
-        });
-        
-        // Contact form submission
-        const contactForm = document.querySelector('form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your message! I will get back to you soon.');
-                this.reset();
-            });
-        }
-        
-        // Matrix effect
+        // Matrix rain effect
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         
-        // Set canvas to full window size
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         
-        // Characters - taken from the original Matrix
-        const matrixChars = "日ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍｦｲｸｺｿﾁﾄﾉﾌﾔﾖﾙﾚﾛﾝ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
         
-        // Set font size
-        const fontSize = 14;
+        const alphabet = katakana + latin + nums + symbols;
         
-        // Calculate number of columns
-        const columns = Math.floor(canvas.width / fontSize);
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
         
-        // Array to keep track of Y position of each drop
-        const drops = [];
-        for (let i = 0; i < columns; i++) {
-            drops[i] = 1;
+        const rainDrops = [];
+        
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
         }
         
-        // Draw the characters
-        function draw() {
-            // Black background with opacity
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        const draw = () => {
+            ctx.fillStyle = 'rgba(10, 10, 18, 0.05)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             
-            // Set font and color
-            ctx.fillStyle = '#00FF00'; // Green text
+            ctx.fillStyle = '#0ff0fc';
             ctx.font = fontSize + 'px monospace';
             
-            // Loop over drops
-            for (let i = 0; i < drops.length; i++) {
-                // Random character
-                const text = matrixChars.charAt(Math.floor(Math.random() * matrixChars.length));
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, rainDrops[i] * fontSize);
                 
-                // Draw character
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-                
-                // Reset drop to top when it reaches bottom
-                // Randomly reset drop to make it more interesting
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
                 }
-                
-                // Move Y coordinate down
-                drops[i]++;
+                rainDrops[i]++;
             }
-        }
+        };
         
-        // Animation loop
-        setInterval(draw, 33);
+        setInterval(draw, 30);
         
-        // Handle window resize
-        window.addEventListener('resize', function() {
+        // Resize canvas when window is resized
+        window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
         });
+        
+        // Animate elements when scrolling
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.project-card, .timeline-item, .skill-progress');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    
+                    if (element.classList.contains('skill-progress')) {
+                        const width = element.getAttribute('data-width');
+                        element.style.width = width;
+                    }
+                }
+            });
+        };
+        
+        // Set initial width for skill bars and hide them
+        document.querySelectorAll('.skill-progress').forEach(bar => {
+            const width = bar.style.width;
+            bar.setAttribute('data-width', width);
+            bar.style.width = '0';
+            bar.style.opacity = '0';
+        });
+        
+        // Hide project cards and timeline items initially
+        document.querySelectorAll('.project-card, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transition = 'opacity 0.5s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
     </script>
-</body>
+
 </html>
