@@ -1,16 +1,14 @@
-<!DOCTYPE html>
+html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Châu Anh Dũng - Cyber Security Specialist portfolio and professional CV">
-    <title>Châu Anh Dũng | Cyber Security Specialist</title>
+    <title>Chau Anh Dung | Cyber Security Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:wght@400;700&display=swap');
+        
         :root {
             --neon-blue: #0ff0fc;
             --neon-pink: #ff2ced;
@@ -18,17 +16,6 @@
             --dark-bg: #0a0a12;
             --darker-bg: #050508;
             --terminal-green: #00ff41;
-            --matrix-green-bright: #00ff41;
-            --matrix-green-dim: #003b00;
-            --midjourney-glow-1: #9d00ff;
-            --midjourney-glow-2: #00ff41;
-            --midjourney-glow-3: #0ff0fc;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
         
         body {
@@ -37,49 +24,40 @@
             color: #e0e0e0;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            line-height: 1.6;
-        }
-        
-        /* Performance optimization for animations */
-        .hardware-accelerated {
-            transform: translateZ(0);
-            will-change: transform, opacity;
-            backface-visibility: hidden;
         }
         
         .neon-text-blue {
             color: var(--neon-blue);
-            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px rgba(15, 240, 252, 0.5);
+            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
         }
         
         .neon-text-pink {
             color: var(--neon-pink);
-            text-shadow: 0 0 5px var(--neon-pink), 0 0 10px rgba(255, 44, 237, 0.5);
+            text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink);
         }
         
         .neon-text-purple {
             color: var(--neon-purple);
-            text-shadow: 0 0 5px var(--neon-purple), 0 0 10px rgba(157, 0, 255, 0.5);
+            text-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple);
         }
         
         .neon-border-blue {
             border: 1px solid var(--neon-blue);
-            box-shadow: 0 0 10px rgba(15, 240, 252, 0.7), inset 0 0 5px rgba(15, 240, 252, 0.4);
+            box-shadow: 0 0 10px var(--neon-blue), inset 0 0 10px var(--neon-blue);
         }
         
         .neon-border-pink {
             border: 1px solid var(--neon-pink);
-            box-shadow: 0 0 10px rgba(255, 44, 237, 0.7), inset 0 0 5px rgba(255, 44, 237, 0.4);
+            box-shadow: 0 0 10px var(--neon-pink), inset 0 0 10px var(--neon-pink);
         }
         
         .neon-border-purple {
             border: 1px solid var(--neon-purple);
-            box-shadow: 0 0 10px rgba(157, 0, 255, 0.7), inset 0 0 5px rgba(157, 0, 255, 0.4);
+            box-shadow: 0 0 10px var(--neon-purple), inset 0 0 10px var(--neon-purple);
         }
         
         .glow-hover:hover {
             text-shadow: 0 0 10px currentColor;
-            transition: text-shadow 0.3s ease;
         }
         
         .terminal-text {
@@ -90,10 +68,8 @@
         .cyberpunk-btn {
             position: relative;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
             z-index: 1;
-            cursor: pointer;
-            letter-spacing: 1px;
         }
         
         .cyberpunk-btn::before {
@@ -103,17 +79,13 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(15, 240, 252, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
             transition: 0.5s;
             z-index: -1;
         }
         
         .cyberpunk-btn:hover::before {
             left: 100%;
-        }
-        
-        .cyberpunk-btn:active {
-            transform: scale(0.98);
         }
         
         .scanline {
@@ -149,7 +121,6 @@
                 linear-gradient(rgba(10, 10, 18, 0.9) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(10, 10, 18, 0.9) 1px, transparent 1px);
             background-size: 20px 20px;
-            background-attachment: fixed;
         }
         
         .typing-cursor {
@@ -170,20 +141,19 @@
         .section-title {
             position: relative;
             display: inline-block;
-            padding-bottom: 5px;
         }
         
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             left: 0;
             width: 100%;
             height: 2px;
             background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
             transform: scaleX(0);
             transform-origin: left;
-            transition: transform 0.5s ease;
+            transition: transform 0.3s ease;
         }
         
         .section-title:hover::after {
@@ -192,7 +162,6 @@
         
         .nav-link {
             position: relative;
-            transition: color 0.3s ease;
         }
         
         .nav-link::after {
@@ -212,19 +181,17 @@
         
         .skill-bar {
             height: 8px;
-            background-color: rgba(5, 5, 8, 0.6);
+            background-color: var(--darker-bg);
             border-radius: 4px;
             overflow: hidden;
             position: relative;
-            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
         }
         
         .skill-progress {
             height: 100%;
             background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
             position: relative;
-            transition: width 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-            border-radius: 4px;
+            transition: width 1s ease;
         }
         
         .skill-progress::after {
@@ -248,26 +215,20 @@
         }
         
         .project-card {
-            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
-                        box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: transform 0.3s, box-shadow 0.3s;
             perspective: 1000px;
-            height: 100%;
         }
         
         .project-card:hover {
             transform: translateY(-10px) scale(1.02);
-            z-index: 1;
         }
         
         .project-card-inner {
             position: relative;
             width: 100%;
             height: 100%;
-            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: transform 0.6s;
             transform-style: preserve-3d;
-            background: rgba(0,0,0,0.4);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
         }
         
         .project-card:hover .project-card-inner {
@@ -278,7 +239,6 @@
             position: relative;
             padding-left: 30px;
             margin-bottom: 30px;
-            transition: transform 0.3s ease, opacity 0.3s ease;
         }
         
         .timeline-item::before {
@@ -291,7 +251,6 @@
             border-radius: 50%;
             background-color: var(--neon-blue);
             box-shadow: 0 0 10px var(--neon-blue);
-            z-index: 2;
         }
         
         .timeline-item::after {
@@ -300,9 +259,8 @@
             left: 7px;
             top: 20px;
             width: 1px;
-            height: calc(100% + 10px);
-            background: linear-gradient(to bottom, var(--neon-blue), transparent);
-            z-index: 1;
+            height: calc(100% - 15px);
+            background-color: var(--neon-blue);
         }
         
         .timeline-item:last-child::after {
@@ -312,19 +270,17 @@
         .input-field {
             background-color: rgba(10, 10, 18, 0.7);
             border: 1px solid var(--neon-purple);
-            color: #fff;
-            transition: all 0.3s ease;
-            border-radius: 4px;
+            transition: all 0.3s;
         }
         
         .input-field:focus {
             border-color: var(--neon-blue);
-            box-shadow: 0 0 10px rgba(15, 240, 252, 0.5);
+            box-shadow: 0 0 10px var(--neon-blue);
             outline: none;
         }
         
         .social-icon {
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s;
         }
         
         .social-icon:hover {
@@ -338,200 +294,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -2;
-            opacity: 0.1;
-        }
-        
-        /* Midjourney style hacker background */
-        .hacker-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             z-index: -1;
-            pointer-events: none;
-            opacity: 0.6;
-        }
-        
-        /* Grid lines for hacker background */
-        .grid-lines {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(to right, rgba(0, 255, 65, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-            background-position: center center;
-        }
-        
-        /* Glowing orbs */
-        .orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(10px);
-            opacity: 0.4;
-            mix-blend-mode: screen;
-        }
-        
-        .orb-1 {
-            top: 20%;
-            left: 20%;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, var(--midjourney-glow-1) 0%, transparent 70%);
-            animation: floating 20s ease-in-out infinite;
-        }
-        
-        .orb-2 {
-            top: 70%;
-            left: 60%;
-            width: 250px;
-            height: 250px;
-            background: radial-gradient(circle, var(--midjourney-glow-2) 0%, transparent 70%);
-            animation: floating 25s ease-in-out 2s infinite reverse;
-        }
-        
-        .orb-3 {
-            top: 30%;
-            left: 80%;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, var(--midjourney-glow-3) 0%, transparent 70%);
-            animation: floating 22s ease-in-out 1s infinite;
-        }
-        
-        /* Hex code background */
-        .hex-code {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.05;
-            font-family: 'Share Tech Mono', monospace;
-            color: var(--terminal-green);
-            overflow: hidden;
-        }
-        
-        .hex-col {
-            position: absolute;
-            top: 0;
-            font-size: 10px;
-            line-height: 1.2;
-            animation: flow 20s linear infinite;
-            user-select: none;
-        }
-        
-        /* Connect lines animation */
-        .connect-lines {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        /* Particles effect */
-        .particles-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        /* Digital noise overlay */
-        .digital-noise {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAACVBMVEUAAAAAAAAAAACDY+nAAAAAA3RSTlA/MiIzThz6AAAANElEQVR4Ae3VsRUAIAwDQSRrf2X40/qvMvTfOndqz3jv/t3PjIyMjIyMjMyTzJPMk8z5ZQY9LHpnlJ0pYgAAAABJRU5ErkJggg==');
-            opacity: 0.05;
-            animation: noiseAnimation 0.5s steps(2) infinite;
-        }
-        
-        /* Hacker style scan lines */
-        .scan-lines {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                to bottom,
-                transparent 50%,
-                rgba(0, 255, 65, 0.02) 50%
-            );
-            background-size: 100% 4px;
-            z-index: 2;
-            pointer-events: none;
-        }
-        
-        /* Glitch effect */
-        .glitch-effect {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            opacity: 0;
-            z-index: 1;
-            animation: glitchEffect 10s infinite;
-        }
-        
-        /* Animations */
-        @keyframes floating {
-            0% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(-10px, 10px) scale(1.05); }
-            50% { transform: translate(10px, -15px) scale(0.95); }
-            75% { transform: translate(5px, 15px) scale(1.05); }
-            100% { transform: translate(0, 0) scale(1); }
-        }
-        
-        @keyframes flow {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-        
-        @keyframes noiseAnimation {
-            0% { transform: translate(0, 0); }
-            10% { transform: translate(-5%, -5%); }
-            20% { transform: translate(3%, 7%); }
-            30% { transform: translate(7%, -3%); }
-            40% { transform: translate(-3%, 6%); }
-            50% { transform: translate(-8%, -8%); }
-            60% { transform: translate(8%, 4%); }
-            70% { transform: translate(3%, -6%); }
-            80% { transform: translate(-5%, 5%); }
-            90% { transform: translate(10%, -5%); }
-            100% { transform: translate(0, 0); }
-        }
-        
-        @keyframes glitchEffect {
-            0%, 90%, 100% { opacity: 0; background: transparent; }
-            91% { opacity: 1; background: rgba(0, 255, 65, 0.1); }
-            91.5% { opacity: 0; background: transparent; }
-            92% { opacity: 1; background: rgba(157, 0, 255, 0.1); }
-            92.5% { opacity: 0; background: transparent; }
-            94% { opacity: 1; background: rgba(15, 240, 252, 0.1); }
-            94.5% { opacity: 0; background: transparent; }
-        }
-        
-        /* Media queries */
-        @media (prefers-reduced-motion: reduce) {
-            .particles-container, 
-            .orb-1, .orb-2, .orb-3, 
-            .hex-col, 
-            .digital-noise {
-                animation: none !important;
-            }
+            opacity: 0.25; /* Increased opacity for bold visibility */
+            pointer-events: none; /* Ensure it doesn't interfere with clicks */
+            filter: contrast(1.2) brightness(1.2); /* Enhance contrast and brightness */
         }
         
         /* Responsive adjustments */
@@ -547,92 +313,12 @@
             .terminal-text {
                 font-size: 0.9rem;
             }
-            
-            .project-card:hover {
-                transform: translateY(-5px) scale(1.01);
-            }
-            
-            .timeline-item {
-                padding-left: 25px;
-            }
-            
-            .timeline-item::before {
-                width: 12px;
-                height: 12px;
-            }
-        }
-        
-        @media (max-width: 640px) {
-            .skill-progress::after {
-                animation: none; /* Disable animation on small screens for better performance */
-            }
-            
-            .project-card-inner {
-                backdrop-filter: none;
-                -webkit-backdrop-filter: none;
-            }
-        }
-        
-        /* Print styles */
-        @media print {
-            body {
-                background: white;
-                color: black;
-            }
-            
-            .matrix-rain, .scanline {
-                display: none;
-            }
-            
-            .neon-text-blue, .neon-text-pink, .neon-text-purple, .terminal-text {
-                color: black;
-                text-shadow: none;
-            }
-            
-            .neon-border-blue, .neon-border-pink, .neon-border-purple {
-                border: 1px solid #333;
-                box-shadow: none;
-            }
-            
-            .skill-progress {
-                background: #333;
-                print-color-adjust: exact;
-            }
         }
     </style>
 </head>
 <body class="grid-pattern">
     <!-- Matrix Rain Background -->
     <canvas id="matrix" class="matrix-rain"></canvas>
-    
-    <!-- Midjourney style hacker background -->
-    <div class="hacker-background">
-        <!-- Grid lines -->
-        <div class="grid-lines"></div>
-        
-        <!-- Glowing orbs -->
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
-        
-        <!-- Hex code background -->
-        <div class="hex-code" id="hexCode"></div>
-        
-        <!-- Connect lines -->
-        <canvas id="connectLines" class="connect-lines"></canvas>
-        
-        <!-- Particles container -->
-        <canvas id="particles" class="particles-container"></canvas>
-        
-        <!-- Digital noise overlay -->
-        <div class="digital-noise"></div>
-        
-        <!-- Scan lines -->
-        <div class="scan-lines"></div>
-        
-        <!-- Glitch effect -->
-        <div class="glitch-effect"></div>
-    </div>
     
     <!-- Scanline Effect -->
     <div class="scanline"></div>
@@ -641,7 +327,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">Châu Anh Dũng</a>
+                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">Châu Anh  Dũng</a>
                 
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="nav-link neon-text-blue">Home</a>
@@ -673,120 +359,39 @@
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-8">
-                <div class="inline-block px-4 py-2 neon-border-blue mb-6 hardware-accelerated glass-effect">
-                    <span class="terminal-text text-lg">&gt; ./welcome.sh</span>
+                <div class="inline-block px-4 py-2 neon-border-blue mb-6">
+                    <span class="terminal-text">Welcome to my CV</span>
                 </div>
             </div>
             
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 neon-text-blue hardware-accelerated">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 neon-text-blue">
                 <span id="typing-text"></span><span class="typing-cursor"></span>
             </h1>
             
             <p class="text-xl md:text-2xl mb-8 terminal-text">
-                <span class="neon-text-blue">[</span> Cybersecurity Specialist <span class="neon-text-pink">|</span> Ethical Hacker <span class="neon-text-pink">|</span> Penetration Tester <span class="neon-text-blue">]</span>
+                Cybersecurity Specialist | Ethical Hacker | Penetration Tester
             </p>
             
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#contact" class="cyberpunk-btn px-6 py-3 neon-border-blue neon-text-blue hover:bg-blue-900 hover:bg-opacity-20 transition duration-300 hardware-accelerated w-full sm:w-auto">
-                    <i class="fas fa-envelope mr-2"></i> Contact Me
+            <div class="flex justify-center space-x-4">
+                <a href="#contact" class="cyberpunk-btn px-6 py-3 neon-border-blue neon-text-blue hover:bg-blue-900 hover:bg-opacity-20 transition duration-300">
+                    Contact Me
                 </a>
-                <a href="#projects" class="cyberpunk-btn px-6 py-3 neon-border-pink neon-text-pink hover:bg-pink-900 hover:bg-opacity-20 transition duration-300 hardware-accelerated w-full sm:w-auto">
-                    <i class="fas fa-code-branch mr-2"></i> View Projects
+                <a href="#projects" class="cyberpunk-btn px-6 py-3 neon-border-pink neon-text-pink hover:bg-pink-900 hover:bg-opacity-20 transition duration-300">
+                    View Projects
                 </a>
             </div>
             
-            <div class="mt-16 animate-bounce hardware-accelerated">
+            <div class="mt-16 animate-bounce">
                 <a href="#about" class="text-gray-400 hover:text-white transition duration-300">
                     <i class="fas fa-chevron-down text-3xl"></i>
                 </a>
             </div>
         </div>
         
-        <!-- Digital elements decoration -->
-        <div class="absolute top-1/4 left-10 w-32 h-32 hardware-accelerated float-animation opacity-25">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                <path fill="none" stroke="#0ff0fc" stroke-width="1" d="M40,30 L160,30 L160,170 L40,170 Z" />
-                <path fill="none" stroke="#0ff0fc" stroke-width="1" d="M40,30 L100,10 L220,10 L160,30" />
-                <path fill="none" stroke="#0ff0fc" stroke-width="1" d="M160,170 L220,150 L220,10" />
-                <path fill="none" stroke="#0ff0fc" stroke-width="1" d="M60,50 L140,50 L140,150 L60,150 Z" />
-                <circle cx="50" cy="40" r="3" fill="#0ff0fc" />
-                <circle cx="150" cy="40" r="3" fill="#0ff0fc" />
-                <circle cx="50" cy="160" r="3" fill="#0ff0fc" />
-                <circle cx="150" cy="160" r="3" fill="#0ff0fc" />
-            </svg>
-        </div>
-        
-        <div class="absolute bottom-1/4 right-10 w-40 h-40 hardware-accelerated float-animation-delay-1 opacity-20">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                <circle cx="100" cy="100" r="80" fill="none" stroke="#ff2ced" stroke-width="1" />
-                <circle cx="100" cy="100" r="40" fill="none" stroke="#ff2ced" stroke-width="1" />
-                <line x1="20" y1="100" x2="180" y2="100" stroke="#ff2ced" stroke-width="1" />
-                <line x1="100" y1="20" x2="100" y2="180" stroke="#ff2ced" stroke-width="1" />
-                <path d="M100,20 A80,80 0 0,1 180,100" fill="none" stroke="#ff2ced" stroke-width="1" stroke-dasharray="5,5" />
-            </svg>
-        </div>
-        
-        <div class="absolute top-1/3 right-1/4 w-24 h-24 hardware-accelerated float-animation-delay-2 opacity-30">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                <polygon points="50,10 90,50 50,90 10,50" fill="none" stroke="#9d00ff" stroke-width="1" />
-                <circle cx="50" cy="50" r="20" fill="none" stroke="#9d00ff" stroke-width="1" />
-                <line x1="50" y1="30" x2="50" y2="70" stroke="#9d00ff" stroke-width="1" />
-                <line x1="30" y1="50" x2="70" y2="50" stroke="#9d00ff" stroke-width="1" />
-            </svg>
-        </div>
-        
-        <!-- HUD-like elements -->
-        <div class="fixed top-5 left-5 text-xs terminal-text opacity-30 hidden md:block">
-            <div>SYSTEM: ONLINE</div>
-            <div>CPU: OPTIMAL</div>
-            <div>SECURITY: MAXIMUM</div>
-        </div>
-        
-        <div class="fixed bottom-5 right-5 text-xs terminal-text opacity-30 hidden md:block">
-            <div class="text-right">LAT: 16.0544° N</div>
-            <div class="text-right">LONG: 108.0717° E</div>
-            <div class="text-right">STATUS: ACTIVE</div>
-        </div>
-        
-        <!-- Binary code decoration (only visible on desktop) -->
-        <div class="fixed top-0 left-0 w-full h-screen pointer-events-none hidden lg:block">
-            <div class="absolute left-4 top-1/4 text-[8px] terminal-text opacity-10 whitespace-pre leading-tight">
-                01001000 01100001 01100011 01101011
-                01100101 01110010 00100000 01000101
-                01110100 01101000 01101001 01100011
-                01110011 00100000 01000011 01101111
-                01100100 01100101 00100000 01101111
-                01100110 00100000 01000011 01101111
-                01101110 01100100 01110101 01100011
-                01110100 00100000 00111010 00100000
-                01010010 01100101 01110011 01110000
-                01100101 01100011 01110100 00100000
-                01010000 01110010 01101001 01110110
-                01100001 01100011 01111001 00101100
-                00100000 01010000 01110010 01101111
-                01110100 01100101 01100011 01110100
-                00100000 01010011 01111001 01110011
-                01110100 01100101 01101101 01110011
-            </div>
-            <div class="absolute right-4 bottom-1/4 text-[8px] terminal-text opacity-10 whitespace-pre leading-tight">
-                01000011 01111001 01100010 01100101
-                01110010 01110011 01100101 01100011
-                01110101 01110010 01101001 01110100
-                01111001 00100000 01101001 01110011
-                00100000 01100001 01100010 01101111
-                01110101 01110100 00100000 01110000
-                01110010 01101111 01110100 01100101
-                01100011 01110100 01101001 01101110
-                01100111 00100000 01100100 01100001
-                01110100 01100001 00100000 01100001
-                01101110 01100100 00100000 01110011
-                01111001 01110011 01110100 01100101
-                01101101 01110011 00100000 01100110
-                01110010 01101111 01101101 00100000
-                01110101 01101110 01100001 01110101
-                01110100 01101000 01101111 01110010
-            </div>
-        </div>
+        <!-- Floating cyberpunk elements -->
+        <div class="absolute top-20 left-20 w-4 h-4 rounded-full bg-blue-500 opacity-70 animate-pulse"></div>
+        <div class="absolute bottom-32 right-32 w-6 h-6 rounded-full bg-purple-500 opacity-70 animate-ping"></div>
+        <div class="absolute top-1/3 right-1/4 w-3 h-3 rounded-full bg-pink-500 opacity-70 animate-pulse"></div>
     </section>
     
     <!-- About Section -->
@@ -797,41 +402,33 @@
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="relative hardware-accelerated">
-                    <div class="w-64 h-64 mx-auto neon-border-purple rounded-full overflow-hidden p-1 glass-effect">
-                        <img src="avatar.jpg" alt="Châu Anh Dũng" class="w-full h-full object-cover rounded-full">
-                        <!-- Add a fallback if image doesn't load -->
-                        <div class="absolute inset-0 flex items-center justify-center rounded-full terminal-text text-xl bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">CAD</div>
+                <div class="relative">
+                    <div class="w-64 h-64 mx-auto neon-border-purple rounded-full overflow-hidden p-1">
+                        <img src="https://via.placeholder.com/256" alt="Chau Anh Dung" class="w-full h-full object-cover rounded-full">
                     </div>
-                    <div class="absolute -bottom-5 -right-5 neon-border-blue glass-effect px-4 py-2 rounded hardware-accelerated">
-                        <span class="terminal-text flex items-center">
-                            <i class="fas fa-shield-alt mr-2"></i> Security Expert
-                        </span>
-                    </div>
-                    <!-- Add scanning effect -->
-                    <div class="absolute inset-0 mx-auto w-64 h-64 rounded-full overflow-hidden pointer-events-none">
-                        <div class="w-full h-4 bg-gradient-to-b from-transparent to-cyan-500 opacity-30 absolute top-0 left-0 animate-[scan_3s_linear_infinite]"></div>
+                    <div class="absolute -bottom-5 -right-5 neon-border-blue bg-black px-4 py-2 rounded">
+                        <span class="terminal-text">Security Expert</span>
                     </div>
                 </div>
                 
-                <div class="glass-effect p-6 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4 neon-text-pink">Châu Anh Dũng</h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 neon-text-pink">Chau Anh Dung</h3>
+                    <p class="text-gray-300 mb-6">
                         I'm a cybersecurity specialist with over 5 years of experience in penetration testing, vulnerability assessment, and security architecture design. My mission is to protect digital assets and help organizations build secure systems.
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div>
-                            <p class="text-gray-400"><span class="neon-text-blue"><i class="fas fa-user mr-2"></i>Name:</span> Châu Anh Dũng</p>
-                            <p class="text-gray-400"><span class="neon-text-blue"><i class="fas fa-envelope mr-2"></i>Email:</span> chauanhdung@dtu.edu.vn</p>
+                            <p class="text-gray-400"><span class="neon-text-blue">Name:</span> Chau Anh Dung</p>
+                            <p class="text-gray-400"><span class="neon-text-blue">Email:</span> contact@chauanhdung.id.vn</p>
                         </div>
                         <div>
-                            <p class="text-gray-400"><span class="neon-text-blue"><i class="fas fa-map-marker-alt mr-2"></i>From:</span> Vietnam</p>
-                            <p class="text-gray-400"><span class="neon-text-blue"><i class="fas fa-certificate mr-2"></i>Certifications:</span> OSCP, CEH, CISSP</p>
+                            <p class="text-gray-400"><span class="neon-text-blue">From:</span> Vietnam</p>
+                            <p class="text-gray-400"><span class="neon-text-blue">Certifications:</span> OSCP, CEH, CISSP</p>
                         </div>
                     </div>
                     
-                    <a href="#" class="inline-block px-6 py-3 neon-border-blue neon-text-blue hover:bg-blue-900 hover:bg-opacity-20 transition duration-300 cyberpunk-btn">
+                    <a href="#" class="inline-block px-6 py-3 neon-border-blue neon-text-blue hover:bg-blue-900 hover:bg-opacity-20 transition duration-300">
                         Download CV <i class="fas fa-download ml-2"></i>
                     </a>
                 </div>
@@ -970,34 +567,8 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="project-card group">
-                    <div class="project-card-inner neon-border-blue rounded-lg overflow-hidden h-full bg-black bg-opacity-50 glass-effect">
-                        <div class="relative overflow-hidden">
-                            <!-- Project "Screenshot" - Fake terminal with code -->
-                            <div class="bg-gray-900 p-4 h-32 overflow-hidden relative">
-                                <div class="flex items-center mb-2">
-                                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-                                    <span class="text-xs text-gray-400">vulnerability_scanner.py</span>
-                                </div>
-                                <pre class="text-xs terminal-text overflow-hidden"><code>#!/usr/bin/python3
-import nmap
-import sys
-import socket
-
-def scan_target(target):
-    scanner = nmap.PortScanner()
-    scanner.scan(target, '1-1024')
-    for host in scanner.all_hosts():
-        print(f"Target: {host}")
-        for proto in scanner[host].all_protocols():</code></pre>
-                            </div>
-                            <!-- Overlay on hover -->
-                            <div class="absolute inset-0 bg-gradient-to-b from-blue-500/30 to-purple-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i class="fas fa-search text-2xl neon-text-blue"></i>
-                            </div>
-                        </div>
+                <div class="project-card">
+                    <div class="project-card-inner neon-border-blue rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-xl font-bold neon-text-blue">Vulnerability Scanner</h3>
@@ -1011,41 +582,14 @@ def scan_target(target):
                                 <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Security</span>
                                 <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Automation</span>
                             </div>
-                            <a href="#" class="terminal-text hover:underline flex items-center">
-                                <span>View Project</span> <i class="fas fa-external-link-alt ml-1 group-hover:translate-x-1 transition-transform duration-300"></i>
-                            </a>
+                            <a href="#" class="terminal-text hover:underline">View Project <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
-                <div class="project-card group">
-                    <div class="project-card-inner neon-border-pink rounded-lg overflow-hidden h-full bg-black bg-opacity-50 glass-effect">
-                        <div class="relative overflow-hidden">
-                            <!-- Project "Screenshot" - Fake terminal with code -->
-                            <div class="bg-gray-900 p-4 h-32 overflow-hidden relative">
-                                <div class="flex items-center mb-2">
-                                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-                                    <span class="text-xs text-gray-400">pentest_framework.rb</span>
-                                </div>
-                                <pre class="text-xs terminal-text overflow-hidden"><code>#!/usr/bin/env ruby
-require 'metasploit/framework'
-require 'msf/core'
-
-class PenTestFramework < Msf::Plugin
-  def initialize(framework, opts)
-    super
-    @name = "PenTest Framework"
-    @framework = framework
-    console_dispatcher = add_console_dispatcher</code></pre>
-                            </div>
-                            <!-- Overlay on hover -->
-                            <div class="absolute inset-0 bg-gradient-to-b from-pink-500/30 to-purple-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i class="fas fa-search text-2xl neon-text-pink"></i>
-                            </div>
-                        </div>
+                <div class="project-card">
+                    <div class="project-card-inner neon-border-pink rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-xl font-bold neon-text-pink">PenTest Framework</h3>
@@ -1059,41 +603,14 @@ class PenTestFramework < Msf::Plugin
                                 <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Metasploit</span>
                                 <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Security</span>
                             </div>
-                            <a href="#" class="terminal-text hover:underline flex items-center">
-                                <span>View Project</span> <i class="fas fa-external-link-alt ml-1 group-hover:translate-x-1 transition-transform duration-300"></i>
-                            </a>
+                            <a href="#" class="terminal-text hover:underline">View Project <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 3 -->
-                <div class="project-card group">
-                    <div class="project-card-inner neon-border-purple rounded-lg overflow-hidden h-full bg-black bg-opacity-50 glass-effect">
-                        <div class="relative overflow-hidden">
-                            <!-- Project "Screenshot" - Fake terminal with code -->
-                            <div class="bg-gray-900 p-4 h-32 overflow-hidden relative">
-                                <div class="flex items-center mb-2">
-                                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                                    <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
-                                    <span class="text-xs text-gray-400">auth.js</span>
-                                </div>
-                                <pre class="text-xs terminal-text overflow-hidden"><code>const express = require('express');
-const router = express.Router();
-const crypto = require('crypto');
-const speakeasy = require('speakeasy');
-const QRCode = require('qrcode');
-
-// Multi-factor authentication setup
-router.post('/setup-2fa', async (req, res) => {
-  const secret = speakeasy.generateSecret({
-    name: "SecureAuthSystem"</code></pre>
-                            </div>
-                            <!-- Overlay on hover -->
-                            <div class="absolute inset-0 bg-gradient-to-b from-purple-500/30 to-blue-500/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <i class="fas fa-search text-2xl neon-text-purple"></i>
-                            </div>
-                        </div>
+                <div class="project-card">
+                    <div class="project-card-inner neon-border-purple rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-xl font-bold neon-text-purple">Secure Auth System</h3>
@@ -1107,9 +624,7 @@ router.post('/setup-2fa', async (req, res) => {
                                 <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Security</span>
                                 <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Auth</span>
                             </div>
-                            <a href="#" class="terminal-text hover:underline flex items-center">
-                                <span>View Project</span> <i class="fas fa-external-link-alt ml-1 group-hover:translate-x-1 transition-transform duration-300"></i>
-                            </a>
+                            <a href="#" class="terminal-text hover:underline">View Project <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1290,7 +805,7 @@ router.post('/setup-2fa', async (req, res) => {
                             </div>
                             <div>
                                 <p class="terminal-text">Email</p>
-                                <p class="text-gray-300">chauanhdung@dtu.edu.vn</p>
+                                <p class="text-gray-300">contact@chauanhdung.id.vn</p>
                             </div>
                         </div>
                         
@@ -1300,7 +815,7 @@ router.post('/setup-2fa', async (req, res) => {
                             </div>
                             <div>
                                 <p class="terminal-text">Phone</p>
-                                <p class="text-gray-300">0826 46 7676</p>
+                                <p class="text-gray-300">+84 123 456 789</p>
                             </div>
                         </div>
                         
@@ -1310,7 +825,7 @@ router.post('/setup-2fa', async (req, res) => {
                             </div>
                             <div>
                                 <p class="terminal-text">Location</p>
-                                <p class="text-gray-300">Danang, Vietnam</p>
+                                <p class="text-gray-300">Hanoi, Vietnam</p>
                             </div>
                         </div>
                     </div>
@@ -1370,7 +885,7 @@ router.post('/setup-2fa', async (req, res) => {
     <footer class="py-8 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center mb-6">
-                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">Châu Anh Dũng</a>
+                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">chauanhdung.id.vn</a>
             </div>
             
             <div class="flex justify-center space-x-6 mb-6">
@@ -1383,7 +898,7 @@ router.post('/setup-2fa', async (req, res) => {
             </div>
             
             <p class="terminal-text">
-                &copy; 2025 Châu Anh Dũng. All rights reserved. Designed with cyberpunk aesthetics.
+                &copy; 2023 Chau Anh Dung. All rights reserved. Designed with cyberpunk aesthetics.
             </p>
         </div>
     </footer>
@@ -1397,9 +912,9 @@ router.post('/setup-2fa', async (req, res) => {
         // Typing animation
         const typingText = document.getElementById('typing-text');
         const phrases = [
-            "Châu Anh Dũng",
+            "Chau Anh Dung",
             "Security Specialist",
-            "Ethical Hacking",
+            "Ethical Hacker",
             "Penetration Tester"
         ];
         let phraseIndex = 0;
@@ -1485,231 +1000,200 @@ router.post('/setup-2fa', async (req, res) => {
             });
         });
         
-        // Enhanced Matrix rain effect with bright text and fading
+        // Matrix rain effect
         const canvas = document.getElementById('matrix');
         const ctx = canvas.getContext('2d');
         
-        // Ensure canvas covers the full screen and is properly scaled for displays
-        function resizeCanvas() {
-            // Get device pixel ratio for high-DPI displays
-            const dpr = window.devicePixelRatio || 1;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const nums = '0123456789';
+        const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+        
+        const alphabet = katakana + latin + nums + symbols;
+        
+        const fontSize = 20; // Increased font size for more prominence
+        const columns = canvas.width / fontSize;
+        
+        // Enhanced color variations for the raindrops
+        const colors = [
+            '#0ff0fc', // Neon blue
+            '#00ff41', // Matrix green
+            '#ff2ced', // Neon pink
+            '#9d00ff', // Neon purple
+            '#ffffff'  // Pure white for extra brightness
+        ];
+        
+        const rainDrops = [];
+        const speeds = [];
+        const brightChars = [];
+        const colorIndices = [];
+        const fontSizeVariations = []; // For size variations
+        const densityFactor = 1.2; // Increase density of drops
+        
+        for (let x = 0; x < columns * densityFactor; x++) {
+            rainDrops[x] = Math.floor(Math.random() * canvas.height / fontSize);
+            speeds[x] = 0.5 + Math.random() * 2; // Wider range of speeds
+            brightChars[x] = Math.random() > 0.8; // More bright characters initially
+            colorIndices[x] = Math.floor(Math.random() * colors.length);
+            fontSizeVariations[x] = 0.8 + Math.random() * 0.6; // Size variation between 80% and 140%
+        }
+        
+        // Enhanced glow effect function
+        function drawGlowingText(text, x, y, color, isBright, sizeFactor) {
+            const actualFontSize = fontSize * sizeFactor;
             
-            // Set display size (css pixels)
+            if (isBright) {
+                // Multi-layered glow for bright characters
+                ctx.shadowBlur = 25;
+                ctx.shadowColor = color;
+                ctx.fillStyle = '#ffffff';
+                ctx.font = `bold ${actualFontSize}px monospace`; // Bold for bright characters
+                ctx.globalAlpha = 1;
+                
+                // Draw multiple layers for stronger glow
+                for (let i = 0; i < 3; i++) {
+                    ctx.shadowBlur = 15 - i * 3;
+                    ctx.fillText(text, x, y);
+                }
+            } else {
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = color;
+                ctx.fillStyle = color;
+                ctx.font = `${actualFontSize}px monospace`;
+                ctx.globalAlpha = 0.95; // Higher base opacity
+            }
+            
+            ctx.fillText(text, x, y);
+            ctx.globalAlpha = 1;
+            ctx.shadowBlur = 0;
+        }
+        
+        // Add subtle pulse effect to the entire canvas
+        let pulseIntensity = 0;
+        let pulseDirection = 0.01;
+        
+        const draw = () => {
+            // More transparent fade for longer trails
+            ctx.fillStyle = 'rgba(10, 10, 18, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Pulsating background effect
+            pulseIntensity += pulseDirection;
+            if (pulseIntensity > 0.2 || pulseIntensity < 0) {
+                pulseDirection *= -1;
+            }
+            
+            // Occasionally add a subtle background flash
+            if (Math.random() > 0.995) {
+                ctx.fillStyle = `rgba(80, 80, 120, ${0.1 + pulseIntensity * 0.1})`;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+            
+            for (let i = 0; i < rainDrops.length; i++) {
+                // More frequent bright character changes
+                if (Math.random() < 0.003) {
+                    brightChars[i] = !brightChars[i];
+                }
+                
+                // Random color changes
+                if (Math.random() < 0.001) {
+                    colorIndices[i] = Math.floor(Math.random() * colors.length);
+                }
+                
+                // Random size variations
+                if (Math.random() < 0.002) {
+                    fontSizeVariations[i] = 0.8 + Math.random() * 0.6;
+                }
+                
+                const color = colors[colorIndices[i]];
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                const xPos = (i % columns) * fontSize;
+                
+                // Draw character with enhanced glow
+                drawGlowingText(
+                    text, 
+                    xPos, 
+                    rainDrops[i] * fontSize, 
+                    color,
+                    brightChars[i],
+                    fontSizeVariations[i]
+                );
+                
+                // Reset with varied conditions
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.96) {
+                    rainDrops[i] = 0;
+                    speeds[i] = 0.5 + Math.random() * 2;
+                    brightChars[i] = Math.random() > 0.7; // 30% chance of being bright on reset
+                }
+                
+                rainDrops[i] += speeds[i];
+            }
+            
+            // Add more frequent spark effects
+            if (Math.random() > 0.85) {
+                const sparkCount = Math.floor(Math.random() * 3) + 1; // 1-3 sparks at once
+                
+                for (let j = 0; j < sparkCount; j++) {
+                    const randomCol = Math.floor(Math.random() * columns);
+                    const randomRow = Math.floor(Math.random() * canvas.height / fontSize);
+                    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                    const randomChar = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                    
+                    // Super bright spark
+                    ctx.shadowBlur = 25;
+                    ctx.shadowColor = '#ffffff';
+                    ctx.fillStyle = '#ffffff';
+                    
+                    // Draw larger character for the spark
+                    ctx.font = `bold ${fontSize * 1.5}px monospace`;
+                    ctx.fillText(randomChar, randomCol * fontSize, randomRow * fontSize);
+                    
+                    // Add a small circular glow around the spark
+                    ctx.beginPath();
+                    ctx.arc(randomCol * fontSize + fontSize/2, randomRow * fontSize - fontSize/3, fontSize/2, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255, 255, 255, 0.1)`;
+                    ctx.fill();
+                    
+                    ctx.shadowBlur = 0;
+                }
+            }
+            
+            // Occasionally add horizontal glitch line effect
+            if (Math.random() > 0.99) {
+                const lineY = Math.random() * canvas.height;
+                const lineHeight = 1 + Math.random() * 5;
+                const lineColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                ctx.fillStyle = lineColor;
+                ctx.globalAlpha = 0.7;
+                ctx.fillRect(0, lineY, canvas.width, lineHeight);
+                ctx.globalAlpha = 1;
+            }
+        };
+        
+        // Faster animation for smoother effect
+        setInterval(draw, 20);
+        
+        // Add resize handler
+        window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             
-            // Set actual size in memory (scaled to account for DPI)
-            canvas.width = window.innerWidth * dpr;
-            canvas.height = window.innerHeight * dpr;
+            const newColumns = Math.ceil(canvas.width / fontSize * densityFactor);
             
-            // Scale all drawing operations by the dpr
-            ctx.scale(dpr, dpr);
-            
-            // Ensure text is crisp
-            ctx.textBaseline = 'top';
-            ctx.font = `${fontSize}px 'Share Tech Mono', monospace`;
-        }
-        
-        resizeCanvas();
-        
-        // Mix of characters for better matrix effect
-        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-        const binary = '01';
-        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const nums = '0123456789';
-        const securityTerms = ['HACK', 'SEC', 'CTF', 'SQL', 'XSS', 'CVE', 'SSH', 'VPN', 'ROOT', 'SHELL', 'UNIX', 'VOID'];
-        const symbols = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
-        
-        // Combined character set
-        const alphabet = katakana + latin + nums + binary + symbols;
-        
-        const fontSize = 14;
-        const columns = Math.ceil(canvas.width / fontSize);
-        
-        // Array of drops - one per column
-        const drops = [];
-        
-        // Array for character colors - some characters will be highlighted
-        const colors = [];
-        
-        // Array for speeds - some drops will fall faster
-        const speeds = [];
-        
-        // Array for brightness - first character in each column is brighter
-        const brightness = [];
-        
-        // Array to keep track of characters in each column
-        const chars = [];
-        
-        // Initialize the arrays
-        function initMatrix() {
-            for (let i = 0; i < columns; i++) {
-                drops[i] = Math.random() * -100; // Start above the canvas for staggered effect
-                speeds[i] = Math.random() * 0.5 + 0.5; // Random speed for each column
-                chars[i] = [];
-                brightness[i] = [];
-                
-                // Fill column with initial random characters
-                for (let j = 0; j < 100; j++) {
-                    chars[i][j] = getRandomChar();
-                    brightness[i][j] = Math.random() * 0.8; // Random initial brightness
+            // Reset arrays with new dimensions
+            for (let x = 0; x < newColumns; x++) {
+                if (x >= rainDrops.length) {
+                    rainDrops[x] = Math.floor(Math.random() * canvas.height / fontSize);
+                    speeds[x] = 0.5 + Math.random() * 2;
+                    brightChars[x] = Math.random() > 0.8;
+                    colorIndices[x] = Math.floor(Math.random() * colors.length);
+                    fontSizeVariations[x] = 0.8 + Math.random() * 0.6;
                 }
             }
-        }
-        
-        // Get a random character with higher probability for certain characters
-        function getRandomChar() {
-            if (Math.random() > 0.97) {
-                // Occasionally show a security term
-                const term = securityTerms[Math.floor(Math.random() * securityTerms.length)];
-                return term.charAt(Math.floor(Math.random() * term.length));
-            } else if (Math.random() > 0.8) {
-                // Higher probability for 0 and 1
-                return binary.charAt(Math.floor(Math.random() * binary.length));
-            } else {
-                return alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-            }
-        }
-        
-        initMatrix();
-        
-        // Main drawing function
-        function drawMatrix() {
-            // Semi-transparent black for trail effect
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.07)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            // For each column
-            for (let i = 0; i < drops.length; i++) {
-                // Randomly change chars in the column occasionally
-                if (Math.random() > 0.98) {
-                    const randomIndex = Math.floor(Math.random() * chars[i].length);
-                    chars[i][randomIndex] = getRandomChar();
-                }
-                
-                // Calculate the row position
-                const rowPosition = Math.floor(drops[i]);
-                
-                // Draw characters in the column with fading effect
-                for (let j = 0; j < 20; j++) {
-                    const y = rowPosition - j;
-                    if (y < 0) continue;
-                    
-                    // Calculate brightness (first char is brightest, then fades)
-                    let alpha;
-                    if (j === 0) {
-                        alpha = 1; // Leading character is brightest
-                        // Randomly change the leading character
-                        if (Math.random() > 0.9) {
-                            chars[i][j] = getRandomChar();
-                        }
-                    } else {
-                        alpha = brightness[i][j % brightness[i].length] * (1 - j / 20);
-                    }
-                    
-                    // Set color based on position and effects
-                    if (j === 0) {
-                        // Leading character is brightest (white or bright green)
-                        ctx.fillStyle = Math.random() > 0.97 ? '#ffffff' : 'var(--matrix-green-bright)';
-                    } else {
-                        // Trailing characters fade from bright to dim green
-                        const green = Math.floor(170 * alpha) + 50;
-                        ctx.fillStyle = `rgba(0, ${green}, 0, ${alpha})`;
-                    }
-                    
-                    // Draw the character
-                    ctx.fillText(chars[i][j % chars[i].length], i * fontSize, y * fontSize);
-                }
-                
-                // Move the drop down
-                drops[i] += speeds[i];
-                
-                // Reset when drop reaches bottom
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                    
-                    // Randomize speed
-                    speeds[i] = Math.random() * 0.5 + 0.5;
-                    
-                    // Shuffle some characters in this column
-                    for (let j = 0; j < chars[i].length; j++) {
-                        if (Math.random() > 0.5) {
-                            chars[i][j] = getRandomChar();
-                        }
-                    }
-                }
-            }
-            
-            // Occasionally add glitch effects
-            if (Math.random() > 0.995) {
-                addGlitchEffect();
-            }
-        }
-        
-        // Add temporary glitch effect
-        function addGlitchEffect() {
-            const glitchDuration = 100; // milliseconds
-            
-            // Create a horizontal line glitch
-            const y = Math.random() * canvas.height;
-            const height = Math.random() * 10 + 2;
-            
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
-            ctx.fillRect(0, y, canvas.width, height);
-            
-            // Reset after duration
-            setTimeout(() => {
-                // The next frame will clear it
-            }, glitchDuration);
-        }
-        
-        // Call draw at regular intervals
-        let animationFrame;
-        
-        function startMatrixAnimation() {
-            if (animationFrame) {
-                cancelAnimationFrame(animationFrame);
-            }
-            
-            function animate() {
-                drawMatrix();
-                animationFrame = requestAnimationFrame(animate);
-            }
-            
-            animate();
-        }
-        
-        startMatrixAnimation();
-        
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            // Stop animation temporarily
-            if (animationFrame) {
-                cancelAnimationFrame(animationFrame);
-            }
-            
-            // Resize canvas
-            resizeCanvas();
-            
-            // Recalculate columns and reinitialize if needed
-            const newColumns = Math.ceil(canvas.width / fontSize);
-            if (newColumns !== columns) {
-                // Resize arrays for new columns
-                for (let i = columns; i < newColumns; i++) {
-                    drops[i] = Math.random() * -100;
-                    speeds[i] = Math.random() * 0.5 + 0.5;
-                    chars[i] = [];
-                    brightness[i] = [];
-                    
-                    for (let j = 0; j < 20; j++) {
-                        chars[i][j] = getRandomChar();
-                        brightness[i][j] = Math.random() * 0.8;
-                    }
-                }
-            }
-            
-            // Restart animation
-            startMatrixAnimation();
         });
         
         // Animate elements when scrolling
@@ -1742,225 +1226,11 @@ router.post('/setup-2fa', async (req, res) => {
         // Hide project cards and timeline items initially
         document.querySelectorAll('.project-card, .timeline-item').forEach(el => {
             el.style.opacity = '0';
-            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease';
         });
         
-        // Add reveal animation when scrolled into view
-        window.addEventListener('scroll', () => {
-            document.querySelectorAll('.project-card, .timeline-item').forEach(el => {
-                const position = el.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-                
-                if (position < screenPosition) {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }
-            });
-            
-            animateOnScroll();
-        });
-        
-        // Initial animation call
+        window.addEventListener('scroll', animateOnScroll);
         window.addEventListener('load', animateOnScroll);
-        
-        // Midjourney Style Hacker Background
-        
-        // 1. Hex Code Background
-        function createHexBackground() {
-            const hexContainer = document.getElementById('hexCode');
-            const characters = '0123456789ABCDEF';
-            const colCount = Math.ceil(window.innerWidth / 40); // Adjust spacing between columns
-            
-            for (let i = 0; i < colCount; i++) {
-                const column = document.createElement('div');
-                column.className = 'hex-col';
-                column.style.left = `${i * 40}px`; // Position columns
-                
-                // Random starting position and speed
-                column.style.animationDuration = `${15 + Math.random() * 10}s`;
-                column.style.animationDelay = `-${Math.random() * 20}s`;
-                
-                // Generate random hex strings
-                let hexContent = '';
-                const lines = Math.ceil(window.innerHeight / 12) + 20; // Extra lines for continuous flow
-                
-                for (let j = 0; j < lines; j++) {
-                    if (Math.random() > 0.5) {
-                        let hexLine = '';
-                        for (let k = 0; k < 4; k++) {
-                            hexLine += characters.charAt(Math.floor(Math.random() * characters.length));
-                        }
-                        hexContent += hexLine + '<br>';
-                    } else {
-                        hexContent += '<br>'; // Empty line occasionally
-                    }
-                }
-                
-                column.innerHTML = hexContent;
-                hexContainer.appendChild(column);
-            }
-        }
-        
-        // 2. Connect Lines Effect
-        function initConnectLines() {
-            const canvas = document.getElementById('connectLines');
-            const ctx = canvas.getContext('2d');
-            const dpr = window.devicePixelRatio || 1;
-            
-            // Set canvas size
-            function resizeCanvas() {
-                canvas.width = window.innerWidth * dpr;
-                canvas.height = window.innerHeight * dpr;
-                ctx.scale(dpr, dpr);
-            }
-            
-            resizeCanvas();
-            window.addEventListener('resize', resizeCanvas);
-            
-            // Nodes for connecting lines
-            const nodes = [];
-            const nodeCount = Math.min(30, Math.max(10, Math.floor(window.innerWidth / 100)));
-            
-            for (let i = 0; i < nodeCount; i++) {
-                nodes.push({
-                    x: Math.random() * window.innerWidth,
-                    y: Math.random() * window.innerHeight,
-                    vx: (Math.random() - 0.5) * 0.3,
-                    vy: (Math.random() - 0.5) * 0.3,
-                    radius: Math.random() * 2 + 1,
-                    color: Math.random() > 0.5 ? 'rgba(0, 255, 65, 0.5)' : 'rgba(15, 240, 252, 0.5)'
-                });
-            }
-            
-            // Animation
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
-                
-                // Draw connections
-                ctx.lineWidth = 0.5;
-                const maxDistance = 150;
-                
-                for (let i = 0; i < nodes.length; i++) {
-                    for (let j = i + 1; j < nodes.length; j++) {
-                        const dx = nodes[i].x - nodes[j].x;
-                        const dy = nodes[i].y - nodes[j].y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (distance < maxDistance) {
-                            const opacity = (1 - distance / maxDistance) * 0.5;
-                            ctx.strokeStyle = `rgba(0, 255, 65, ${opacity})`;
-                            
-                            ctx.beginPath();
-                            ctx.moveTo(nodes[i].x, nodes[i].y);
-                            ctx.lineTo(nodes[j].x, nodes[j].y);
-                            ctx.stroke();
-                        }
-                    }
-                }
-                
-                // Draw and update nodes
-                for (let i = 0; i < nodes.length; i++) {
-                    const node = nodes[i];
-                    
-                    // Draw node
-                    ctx.fillStyle = node.color;
-                    ctx.beginPath();
-                    ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-                    ctx.fill();
-                    
-                    // Update position
-                    node.x += node.vx;
-                    node.y += node.vy;
-                    
-                    // Bounce off edges
-                    if (node.x < 0 || node.x > window.innerWidth) node.vx *= -1;
-                    if (node.y < 0 || node.y > window.innerHeight) node.vy *= -1;
-                }
-                
-                requestAnimationFrame(animate);
-            }
-            
-            animate();
-        }
-        
-        // 3. Particles Effect
-        function initParticles() {
-            const canvas = document.getElementById('particles');
-            const ctx = canvas.getContext('2d');
-            const dpr = window.devicePixelRatio || 1;
-            
-            // Set canvas size
-            function resizeCanvas() {
-                canvas.width = window.innerWidth * dpr;
-                canvas.height = window.innerHeight * dpr;
-                ctx.scale(dpr, dpr);
-            }
-            
-            resizeCanvas();
-            window.addEventListener('resize', resizeCanvas);
-            
-            // Create particles
-            const particles = [];
-            const particleCount = Math.min(100, Math.max(30, Math.floor(window.innerWidth / 20)));
-            
-            for (let i = 0; i < particleCount; i++) {
-                particles.push({
-                    x: Math.random() * window.innerWidth,
-                    y: Math.random() * window.innerHeight,
-                    size: Math.random() * 2 + 0.5,
-                    speed: Math.random() * 0.5 + 0.1,
-                    opacity: Math.random() * 0.5 + 0.2,
-                    color: i % 3 === 0 ? '#9d00ff' : (i % 3 === 1 ? '#00ff41' : '#0ff0fc')
-                });
-            }
-            
-            // Animation
-            function animateParticles() {
-                ctx.clearRect(0, 0, canvas.width / dpr, canvas.height / dpr);
-                
-                for (let i = 0; i < particles.length; i++) {
-                    const p = particles[i];
-                    
-                    ctx.globalAlpha = p.opacity;
-                    ctx.fillStyle = p.color;
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                    ctx.fill();
-                    
-                    // Move particles
-                    p.y += p.speed;
-                    
-                    // Reset when off screen
-                    if (p.y > window.innerHeight) {
-                        p.y = -10;
-                        p.x = Math.random() * window.innerWidth;
-                    }
-                }
-                
-                requestAnimationFrame(animateParticles);
-            }
-            
-            animateParticles();
-        }
-        
-        // Initialize all background effects
-        window.addEventListener('load', () => {
-            createHexBackground();
-            initConnectLines();
-            initParticles();
-            
-            // Add occasional glitch effect
-            setInterval(() => {
-                if (Math.random() > 0.7) {
-                    const glitchElement = document.querySelector('.glitch-effect');
-                    glitchElement.style.animation = 'none';
-                    setTimeout(() => {
-                        glitchElement.style.animation = 'glitchEffect 10s infinite';
-                    }, 10);
-                }
-            }, 5000);
-        });
     </script>
 
 </html>
