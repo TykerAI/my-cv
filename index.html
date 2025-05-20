@@ -1,13 +1,30 @@
-html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Châu Anh Dũng - Cybersecurity Student and Future Red Team Specialist">
+    <meta name="theme-color" content="#0a0a12">
     <title>Châu Anh Dũng | Cyber Security Student</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwZmYwZmMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgMjJzOC04IDgtMTRhOCA4IDAgMSAwLTE2IDBjMCA2IDggMTQgOCAxNHoiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjhpIiByPSIzIj48L2NpcmNsZT48L3N2Zz4=">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwZmYwZmMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgMjJzOC04IDgtMTRhOCA4IDAgMSAwLTE2IDBjMCA2IDggMTQgOCAxNHoiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjhpIiByPSIzIj48L2NpcmNsZT48L3N2Zz4=">
+    
+    <!-- Critical CSS first -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Ubuntu+Mono:wght@400;700&display=swap');
+        /* Font optimization */
+        html {
+            font-display: swap;
+            text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
         
         :root {
             --neon-blue: #0ff0fc;
@@ -19,11 +36,14 @@ html>
         }
         
         body {
-            font-family: 'Share Tech Mono', monospace;
+            font-family: 'Share Tech Mono', monospace, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             background-color: var(--dark-bg);
             color: #e0e0e0;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .neon-text-blue {
@@ -62,7 +82,8 @@ html>
         
         .terminal-text {
             color: var(--terminal-green);
-            font-family: 'Ubuntu Mono', monospace;
+            font-family: 'Ubuntu Mono', monospace, Consolas, 'Courier New', Courier, monospace;
+            font-feature-settings: "liga" 0;
         }
         
         .cyberpunk-btn {
@@ -300,8 +321,31 @@ html>
             filter: contrast(1.3) brightness(1.2); /* Enhanced contrast for sharper appearance */
         }
         
+        /* Font Display Strategy */
+        @font-face {
+            font-family: 'Share Tech Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Share Tech Mono'), local('ShareTechMono-Regular'), url(https://fonts.gstatic.com/s/sharetechmono/v10/J7aHnp1uDWRBEqV98dVQztYldFcLowEF.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        
+        @font-face {
+            font-family: 'Ubuntu Mono';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local('Ubuntu Mono'), local('UbuntuMono-Regular'), url(https://fonts.gstatic.com/s/ubuntumono/v10/KFOjCneDtsqEr0keqCMhbCc6CsQ.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            html {
+                font-size: 14px;
+            }
+            
             .hero-text {
                 font-size: 1.5rem;
             }
@@ -314,10 +358,40 @@ html>
                 font-size: 0.9rem;
             }
         }
+        
+        @media (max-width: 480px) {
+            html {
+                font-size: 12px;
+            }
+            
+            .hero-text {
+                font-size: 1.3rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .terminal-text {
+                font-size: 0.85rem;
+            }
+            
+            .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body class="grid-pattern">
-    <!-- Matrix Rain Background -->
+    <!-- Matrix Rain Background with preloader -->
+    <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-black z-50 flex items-center justify-center">
+        <div class="text-center">
+            <div class="text-2xl neon-text-blue mb-4">Loading...</div>
+            <div class="w-32 h-2 bg-gray-900 rounded-full overflow-hidden">
+                <div id="loading-bar" class="h-full bg-blue-500 rounded-full" style="width: 0%; transition: width 0.5s;"></div>
+            </div>
+        </div>
+    </div>
     <canvas id="matrix" class="matrix-rain"></canvas>
     
     <!-- Scanline Effect -->
@@ -402,9 +476,9 @@ html>
             </h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                                    <div class="relative">
+                <div class="relative">
                     <div class="w-64 h-64 mx-auto neon-border-purple rounded-full overflow-hidden p-1">
-                        <img src="avatar.jpg" alt="Châu Anh Dũng" class="w-full h-full object-cover rounded-full">
+                        <img src="https://via.placeholder.com/256" alt="Châu Anh Dũng" class="w-full h-full object-cover rounded-full">
                     </div>
                     <div class="absolute -bottom-5 -right-5 neon-border-blue bg-black px-4 py-2 rounded">
                         <span class="terminal-text">Security Student</span>
@@ -414,13 +488,13 @@ html>
                 <div>
                     <h3 class="text-2xl font-bold mb-4 neon-text-pink">Châu Anh Dũng</h3>
                     <p class="text-gray-300 mb-6">
-                        I'm a cybersecurity student at Duy Tan University in Da Nang, passionate about becoming a white hat hacker and Red Team specialist. Currently enhancing my skills through the AI program at Samsung Innovation Campus and VNNIC Internet School for Youth (VISY 2025) while managing my family's laundry business.
+                        I'm a cybersecurity student at Duy Tan University in Da Nang, driven by a deep passion for digital security and ethical hacking. My goal is to become an elite Red Team specialist who can identify vulnerabilities before malicious actors exploit them. I believe that understanding offensive security is essential to building effective defenses. Currently enhancing my technical arsenal through the AI program at Samsung Innovation Campus and VNNIC Internet School for Youth (VISY 2025), I'm committed to developing the skills necessary to protect individuals, organizations, and critical infrastructure from cyber threats.
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div>
                             <p class="text-gray-400"><span class="neon-text-blue">Name:</span> Châu Anh Dũng</p>
-                            <p class="text-gray-400"><span class="neon-text-blue">Email:</span> chauanhdung@dtu.edu.vn</p>
+                            <p class="text-gray-400"><span class="neon-text-blue">Email:</span> contact@chauanhdung.id.vn</p>
                             <p class="text-gray-400"><span class="neon-text-blue">Birth Year:</span> 2003</p>
                         </div>
                         <div>
@@ -451,41 +525,51 @@ html>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span class="terminal-text">Shell Scripting</span>
-                            <span class="terminal-text">75%</span>
+                            <span class="terminal-text">Metasploit Framework</span>
+                            <span class="terminal-text">55%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
+                            <div class="skill-progress" style="width: 55%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span class="terminal-text">Network Connections</span>
-                            <span class="terminal-text">70%</span>
+                            <span class="terminal-text">Web Penetration Testing</span>
+                            <span class="terminal-text">50%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
+                            <div class="skill-progress" style="width: 50%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span class="terminal-text">Reverse Shell</span>
-                            <span class="terminal-text">65%</span>
+                            <span class="terminal-text">Cryptography & Hashing</span>
+                            <span class="terminal-text">45%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 65%"></div>
+                            <div class="skill-progress" style="width: 45%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span class="terminal-text">Buffer Overflow/IP Spoofing</span>
-                            <span class="terminal-text">60%</span>
+                            <span class="terminal-text">Network Security</span>
+                            <span class="terminal-text">50%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 60%"></div>
+                            <div class="skill-progress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="terminal-text">Vulnerability Assessment</span>
+                            <span class="terminal-text">48%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 48%"></div>
                         </div>
                     </div>
                 </div>
@@ -495,87 +579,98 @@ html>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span class="terminal-text">Excel & Power BI</span>
-                            <span class="terminal-text">85%</span>
+                            <span class="terminal-text">Kali Linux & WSL</span>
+                            <span class="terminal-text">60%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
+                            <div class="skill-progress" style="width: 60%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span class="terminal-text">Linux & WSL2</span>
-                            <span class="terminal-text">75%</span>
+                            <span class="terminal-text">Programming (Bash, Python, C/C++)</span>
+                            <span class="terminal-text">45%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 75%"></div>
+                            <div class="skill-progress" style="width: 45%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span class="terminal-text">Docker</span>
-                            <span class="terminal-text">70%</span>
+                            <span class="terminal-text">Wireshark</span>
+                            <span class="terminal-text">55%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 70%"></div>
+                            <div class="skill-progress" style="width: 55%"></div>
                         </div>
                     </div>
                     
                     <div class="mb-6">
                         <div class="flex justify-between mb-2">
-                            <span class="terminal-text">AI Applications</span>
-                            <span class="terminal-text">65%</span>
+                            <span class="terminal-text">Nmap</span>
+                            <span class="terminal-text">50%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 65%"></div>
+                            <div class="skill-progress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex justify-between mb-2">
+                            <span class="terminal-text">Autopsy</span>
+                            <span class="terminal-text">40%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 40%"></div>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="mt-12">
-                <h3 class="text-xl font-bold mb-6 neon-text-blue">Security Tools</h3>
+                <h3 class="text-xl font-bold mb-6 neon-text-blue">Security Tools & Technologies</h3>
                 
-                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div class="p-4 neon-border-purple rounded-lg text-center hover:bg-purple-900 hover:bg-opacity-20 transition duration-300">
-                        <i class="fas fa-tools text-4xl neon-text-blue mb-2"></i>
-                        <p class="terminal-text">nmap</p>
+                        <i class="fas fa-search text-4xl neon-text-blue mb-2"></i>
+                        <p class="terminal-text">Nmap</p>
                     </div>
                     <div class="p-4 neon-border-blue rounded-lg text-center hover:bg-blue-900 hover:bg-opacity-20 transition duration-300">
-                        <i class="fas fa-code text-4xl neon-text-pink mb-2"></i>
-                        <p class="terminal-text">netcat</p>
+                        <i class="fas fa-bug text-4xl neon-text-pink mb-2"></i>
+                        <p class="terminal-text">Metasploit</p>
                     </div>
                     <div class="p-4 neon-border-pink rounded-lg text-center hover:bg-pink-900 hover:bg-opacity-20 transition duration-300">
                         <i class="fas fa-network-wired text-4xl neon-text-purple mb-2"></i>
                         <p class="terminal-text">Wireshark</p>
                     </div>
                     <div class="p-4 neon-border-purple rounded-lg text-center hover:bg-purple-900 hover:bg-opacity-20 transition duration-300">
-                        <i class="fas fa-lock text-4xl neon-text-blue mb-2"></i>
-                        <p class="terminal-text">OpenSSL</p>
+                        <i class="fas fa-spider text-4xl neon-text-blue mb-2"></i>
+                        <p class="terminal-text">Burp Suite</p>
                     </div>
                     <div class="p-4 neon-border-blue rounded-lg text-center hover:bg-blue-900 hover:bg-opacity-20 transition duration-300">
-                        <i class="fas fa-terminal text-4xl neon-text-pink mb-2"></i>
-                        <p class="terminal-text">socat</p>
+                        <i class="fas fa-network-wired text-4xl neon-text-pink mb-2"></i>
+                        <p class="terminal-text">Networking</p>
                     </div>
                     <div class="p-4 neon-border-pink rounded-lg text-center hover:bg-pink-900 hover:bg-opacity-20 transition duration-300">
-                        <i class="fab fa-docker text-4xl neon-text-purple mb-2"></i>
-                        <p class="terminal-text">Docker</p>
+                        <i class="fab fa-python text-4xl neon-text-purple mb-2"></i>
+                        <p class="terminal-text">Python</p>
                     </div>
                     <div class="p-4 neon-border-purple rounded-lg text-center hover:bg-purple-900 hover:bg-opacity-20 transition duration-300">
-                        <i class="fab fa-linux text-4xl neon-text-blue mb-2"></i>
+                        <i class="fab fa-windows text-4xl neon-text-blue mb-2"></i>
                         <p class="terminal-text">WSL2</p>
                     </div>
                     <div class="p-4 neon-border-blue rounded-lg text-center hover:bg-blue-900 hover:bg-opacity-20 transition duration-300">
-                        <i class="fas fa-table text-4xl neon-text-pink mb-2"></i>
-                        <p class="terminal-text">Excel & Power BI</p>
+                        <i class="fas fa-code text-4xl neon-text-pink mb-2"></i>
+                        <p class="terminal-text">C/C++</p>
                     </div>
                 </div>
                 
                 <div class="mt-6 text-center p-4 neon-border-blue rounded-lg bg-black bg-opacity-50">
-                    <h4 class="text-lg font-bold mb-3 neon-text-blue">Current Progress</h4>
-                    <p class="text-gray-300">OverTheWire Wargame: Bandit20</p>
+                    <h4 class="text-lg font-bold mb-3 neon-text-blue">Current Progress & Achievements</h4>
+                    <p class="text-gray-300">OverTheWire Wargame: Bandit16 → Bandit17</p>
+                    <p class="text-gray-300">TryHackMe: Blue Room - MS17-010 Exploitation</p>
                     <p class="text-gray-300">Samsung Innovation Campus: AI Program</p>
                     <p class="text-gray-300">VNNIC Internet School for Youth (VISY 2025)</p>
                 </div>
@@ -596,18 +691,18 @@ html>
                     <div class="project-card-inner neon-border-blue rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-xl font-bold neon-text-blue">Family Laundry Business</h3>
+                                <h3 class="text-xl font-bold neon-text-blue">Network Security Lab</h3>
                                 <span class="terminal-text">Current</span>
                             </div>
                             <p class="text-gray-300 mb-4">
-                                Developing the family laundry business with AI and automation integration, aiming to expand to multiple branches.
+                                Building a comprehensive home lab environment for network security testing, including virtualized network infrastructure, vulnerable machines, and security monitoring tools.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Business</span>
-                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">AI</span>
-                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Automation</span>
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Infrastructure</span>
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Virtualization</span>
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Security Testing</span>
                             </div>
-                            <a href="#" class="terminal-text hover:underline">Business Plan <i class="fas fa-external-link-alt ml-1"></i></a>
+                            <a href="#" class="terminal-text hover:underline">Lab Setup <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -618,7 +713,7 @@ html>
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-xl font-bold neon-text-pink">Personal Website</h3>
-                                <span class="terminal-text">2025</span>
+                                <span class="terminal-text">2023</span>
                             </div>
                             <p class="text-gray-300 mb-4">
                                 Created and deployed my personal website CV at chauanhdung.id.vn using GitHub Pages and Vercel with Cloudflare integration.
@@ -638,19 +733,19 @@ html>
                     <div class="project-card-inner neon-border-purple rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-xl font-bold neon-text-purple">Nextcloud Deployment</h3>
-                                <span class="terminal-text">2025</span>
+                                <h3 class="text-xl font-bold neon-text-purple">VNNIC National Internet Infrastructure Study</h3>
+                                <span class="terminal-text">2023 - 2025</span>
                             </div>
                             <p class="text-gray-300 mb-4">
-                                Successfully deployed a Nextcloud server with SSH remote access via TailScale for secure file sharing and collaboration using Docker, WSL2, and Linux.
+                                Research project for VNNIC Fellowship on the strategic importance of national internet resources (.vn domains, IP/ASN, DNS, VNIX) for innovation in accordance with Resolution 57-NQ/TW, including proposals for enhancing cybersecurity of critical digital infrastructure.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Self-hosting</span>
-                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Docker</span>
-                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">WSL2</span>
-                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">TailScale</span>
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Internet Governance</span>
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">DNS Security</span>
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Digital Policy</span>
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">VNNIC</span>
                             </div>
-                            <a href="#" class="terminal-text hover:underline">Project Details <i class="fas fa-external-link-alt ml-1"></i></a>
+                            <a href="#" class="terminal-text hover:underline">Fellowship Submission <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -660,19 +755,19 @@ html>
                     <div class="project-card-inner neon-border-blue rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-xl font-bold neon-text-blue">Social Media Marketing</h3>
+                                <h3 class="text-xl font-bold neon-text-blue">CTF Participation</h3>
                                 <span class="terminal-text">Ongoing</span>
                             </div>
                             <p class="text-gray-300 mb-4">
-                                Creating professional Facebook pages and community groups for the family laundry business with planned AI chatbot integration and customer reward systems.
+                                Regular participation in Capture The Flag competitions and security challenges, including TryHackMe rooms, OverTheWire wargames, and PicoCTF, to develop practical hacking skills and problem-solving abilities.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Marketing</span>
-                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Social Media</span>
-                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">AI Chatbots</span>
-                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Analytics</span>
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">CTF</span>
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Problem Solving</span>
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Ethical Hacking</span>
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">TryHackMe</span>
                             </div>
-                            <a href="#" class="terminal-text hover:underline">Marketing Plan <i class="fas fa-external-link-alt ml-1"></i></a>
+                            <a href="#" class="terminal-text hover:underline">Challenge Portfolio <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -682,18 +777,18 @@ html>
                     <div class="project-card-inner neon-border-pink rounded-lg overflow-hidden h-full bg-black bg-opacity-50">
                         <div class="p-6">
                             <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-xl font-bold neon-text-pink">Cybersecurity Learning Path</h3>
-                                <span class="terminal-text">In Progress</span>
+                                <h3 class="text-xl font-bold neon-text-pink">MS17-010 Exploitation Lab</h3>
+                                <span class="terminal-text">Completed</span>
                             </div>
                             <p class="text-gray-300 mb-4">
-                                Systematically working through cybersecurity challenges and learning resources to become a Red Team expert with a focus on shell scripting, network connections, and reverse shells.
+                                Successfully completed the TryHackMe Blue Room challenge, exploiting the EternalBlue vulnerability (MS17-010) using Metasploit to gain system access on a Windows server.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Education</span>
-                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Hacking</span>
-                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">Red Team</span>
+                                <span class="px-2 py-1 text-xs neon-border-purple neon-text-purple rounded">Metasploit</span>
+                                <span class="px-2 py-1 text-xs neon-border-blue neon-text-blue rounded">Penetration Testing</span>
+                                <span class="px-2 py-1 text-xs neon-border-pink neon-text-pink rounded">TryHackMe</span>
                             </div>
-                            <a href="#" class="terminal-text hover:underline">Learning Path <i class="fas fa-external-link-alt ml-1"></i></a>
+                            <a href="https://tryhackme.com/room/blue" class="terminal-text hover:underline">View Challenge <i class="fas fa-external-link-alt ml-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -738,9 +833,9 @@ html>
                         <div class="timeline-item">
                             <div class="neon-border-blue bg-black bg-opacity-50 p-6 rounded-lg">
                                 <h4 class="text-lg font-bold neon-text-blue mb-2">Samsung Innovation Campus</h4>
-                                <p class="terminal-text mb-2">AI Program Student | 2025 - Present</p>
+                                <p class="terminal-text mb-2">AI Program Student | 2023 - Present</p>
                                 <p class="text-gray-300">
-                                    Learning AI application development and implementation with a focus on practical applications in cybersecurity and business automation.
+                                    Developing advanced AI skills with focus on security applications, including threat detection models, anomaly identification systems, and security automation frameworks for enhancing cyber defense capabilities.
                                 </p>
                             </div>
                         </div>
@@ -748,10 +843,10 @@ html>
                         <!-- Experience 2 -->
                         <div class="timeline-item">
                             <div class="neon-border-pink bg-black bg-opacity-50 p-6 rounded-lg">
-                                <h4 class="text-lg font-bold neon-text-pink mb-2">Family Laundry Business</h4>
-                                <p class="terminal-text mb-2">Digital Transformation Lead | Ongoing</p>
+                                <h4 class="text-lg font-bold neon-text-pink mb-2">VNNIC Internet School</h4>
+                                <p class="terminal-text mb-2">Security Research Fellow | 2023 - 2025</p>
                                 <p class="text-gray-300">
-                                    Leading the digital transformation and marketing initiatives for the family laundry business, implementing automation and AI solutions.
+                                    Conducting research on national internet infrastructure security, focusing on DNS protection, domain security standards, and critical internet resource resilience against targeted cyber attacks.
                                 </p>
                             </div>
                         </div>
@@ -759,10 +854,10 @@ html>
                         <!-- Experience 3 -->
                         <div class="timeline-item">
                             <div class="neon-border-purple bg-black bg-opacity-50 p-6 rounded-lg">
-                                <h4 class="text-lg font-bold neon-text-purple mb-2">Self-directed Learning</h4>
-                                <p class="terminal-text mb-2">Cybersecurity Enthusiast | Ongoing</p>
+                                <h4 class="text-lg font-bold neon-text-purple mb-2">Penetration Testing Practice</h4>
+                                <p class="terminal-text mb-2">Cybersecurity Practitioner | Ongoing</p>
                                 <p class="text-gray-300">
-                                    Actively participating in wargames (OverTheWire Bandit16→17), CTFs, and other cybersecurity learning platforms to develop hacking skills.
+                                    Systematically developing offensive security skills through organized penetration testing practice in controlled environments, including TryHackMe challenges (Blue Room completion), CTF competitions, and OverTheWire wargames (Bandit16→17).
                                 </p>
                             </div>
                         </div>
@@ -770,10 +865,10 @@ html>
                         <!-- Experience 4 -->
                         <div class="timeline-item">
                             <div class="neon-border-blue bg-black bg-opacity-50 p-6 rounded-lg">
-                                <h4 class="text-lg font-bold neon-text-blue mb-2">Personal Website Deployment</h4>
-                                <p class="terminal-text mb-2">Web Developer | 2025</p>
+                                <h4 class="text-lg font-bold neon-text-blue mb-2">Security-Focused Web Development</h4>
+                                <p class="terminal-text mb-2">Web Security Specialist | 2023</p>
                                 <p class="text-gray-300">
-                                    Created and deployed personal CV website at chauanhdung.id.vn using GitHub Pages and Vercel with Cloudflare integration.
+                                    Designed and deployed secure web applications with emphasis on implementing robust security practices, vulnerability assessment, and secure coding principles. Leveraged GitHub, Vercel, and Cloudflare for secure deployment pipelines.
                                 </p>
                             </div>
                         </div>
@@ -788,7 +883,7 @@ html>
                         <div class="timeline-item">
                             <div class="neon-border-blue bg-black bg-opacity-50 p-6 rounded-lg">
                                 <h4 class="text-lg font-bold neon-text-blue mb-2">BSc in Cybersecurity</h4>
-                                <p class="terminal-text mb-2">Duy Tan University, Da Nang | 2025 - Present</p>
+                                <p class="terminal-text mb-2">Duy Tan University, Da Nang | 2021 - Present</p>
                                 <p class="text-gray-300">
                                     Studying cybersecurity with a focus on offensive security techniques, network protocols, and system administration.
                                 </p>
@@ -799,7 +894,7 @@ html>
                         <div class="timeline-item">
                             <div class="neon-border-pink bg-black bg-opacity-50 p-6 rounded-lg">
                                 <h4 class="text-lg font-bold neon-text-pink mb-2">AI Program</h4>
-                                <p class="terminal-text mb-2">Samsung Innovation Campus | 2025 - Present</p>
+                                <p class="terminal-text mb-2">Samsung Innovation Campus | 2023 - Present</p>
                                 <p class="text-gray-300">
                                     Specialized training in AI applications with a focus on practical implementation in cybersecurity and business automation.
                                 </p>
@@ -810,7 +905,7 @@ html>
                         <div class="timeline-item">
                             <div class="neon-border-blue bg-black bg-opacity-50 p-6 rounded-lg">
                                 <h4 class="text-lg font-bold neon-text-blue mb-2">VISY 2025 Program</h4>
-                                <p class="terminal-text mb-2">VNNIC Internet School for Youth | 2025 - Present</p>
+                                <p class="terminal-text mb-2">VNNIC Internet School for Youth | 2023 - Present</p>
                                 <p class="text-gray-300">
                                     Professional training program by Vietnam Internet Network Information Center (VNNIC) to obtain certification in internet technologies.
                                 </p>
@@ -843,9 +938,9 @@ html>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
                     <h3 class="text-2xl font-bold mb-6 neon-text-blue">Get In Touch</h3>
-                                    <p class="text-gray-300 mb-8">
+                    <p class="text-gray-300 mb-8">
                     "To protect the digital world, first understand how it's attacked." I don't just learn to know, I learn to do – and do to lead. Passionate about becoming the best in cybersecurity as a Red Team specialist while implementing AI solutions for business optimization.
-                </p>
+                    </p>
                     
                     <div class="space-y-4">
                         <div class="flex items-center">
@@ -854,7 +949,7 @@ html>
                             </div>
                             <div>
                                 <p class="terminal-text">Email</p>
-                                <p class="text-gray-300">chauanhdung@dtu.edu.vn</p>
+                                <p class="text-gray-300">contact@chauanhdung.id.vn</p>
                             </div>
                         </div>
                         
@@ -864,7 +959,7 @@ html>
                             </div>
                             <div>
                                 <p class="terminal-text">Phone</p>
-                                <p class="text-gray-300">+84 826 46 7676</p>
+                                <p class="text-gray-300">+84 123 456 789</p>
                             </div>
                         </div>
                         
@@ -882,17 +977,14 @@ html>
                     <div class="mt-8">
                         <h4 class="text-xl font-bold mb-4 neon-text-purple">Follow Me</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center neon-border-blue rounded-full neon-text-blue">
+                            <a href="https://github.com/TykerAI" target="_blank" rel="noopener" class="social-icon w-10 h-10 flex items-center justify-center neon-border-blue rounded-full neon-text-blue">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center neon-border-pink rounded-full neon-text-pink">
+                            <a href="https://www.linkedin.com/in/anh-d%C5%A9ng-ch%C3%A2u-533b98364/" target="_blank" rel="noopener" class="social-icon w-10 h-10 flex items-center justify-center neon-border-pink rounded-full neon-text-pink">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center neon-border-purple rounded-full neon-text-purple">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon w-10 h-10 flex items-center justify-center neon-border-blue rounded-full neon-text-blue">
-                                <i class="fab fa-hacker-news"></i>
+                            <a href="https://tryhackme.com/p/anhdung1309" target="_blank" rel="noopener" class="social-icon w-10 h-10 flex items-center justify-center neon-border-purple rounded-full neon-text-purple" title="TryHackMe Profile">
+                                <i class="fas fa-cloud"></i>
                             </a>
                         </div>
                     </div>
@@ -934,7 +1026,7 @@ html>
     <footer class="py-8 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center mb-6">
-                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">Châu Anh Dũng</a>
+                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">chauanhdung.id.vn</a>
             </div>
             
             <div class="flex justify-center space-x-6 mb-6">
@@ -947,7 +1039,7 @@ html>
             </div>
             
             <p class="terminal-text">
-                &copy; 2025 Châu Anh Dũng. All rights reserved. Future Red Team specialist and AI innovator.
+                &copy; 2023 Châu Anh Dũng. All rights reserved. Future Red Team specialist and AI innovator.
             </p>
         </div>
     </footer>
@@ -958,6 +1050,36 @@ html>
     </a>
     
     <script>
+        // Preloader
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            const loadingBar = document.getElementById('loading-bar');
+            
+            // Simulate loading progress
+            let width = 0;
+            const interval = setInterval(function() {
+                width += 5;
+                loadingBar.style.width = width + '%';
+                
+                if (width >= 100) {
+                    clearInterval(interval);
+                    
+                    // Hide preloader after a small delay
+                    setTimeout(function() {
+                        preloader.style.opacity = '0';
+                        setTimeout(function() {
+                            preloader.style.display = 'none';
+                        }, 500);
+                    }, 500);
+                }
+            }, 100);
+        });
+        
+        // Font loading check
+        document.fonts.ready.then(function() {
+            console.log('All fonts are loaded and ready to use!');
+        });
+        
         // Typing animation
         const typingText = document.getElementById('typing-text');
         const phrases = [
@@ -1049,203 +1171,214 @@ html>
             });
         });
         
-        // Matrix rain effect - Optimized for hacker aesthetic
-        const canvas = document.getElementById('matrix');
-        const ctx = canvas.getContext('2d');
-        
-        // Set up the canvas with proper device pixel ratio for crisp text
-        function setupCanvas() {
-            const dpr = window.devicePixelRatio || 1;
-            canvas.width = window.innerWidth * dpr;
-            canvas.height = window.innerHeight * dpr;
+        // Matrix rain effect - Optimized for hacker aesthetic and performance
+        const initMatrixEffect = () => {
+            const canvas = document.getElementById('matrix');
+            const ctx = canvas.getContext('2d', { alpha: false }); // Optimization for non-transparent canvas
             
-            // Scale canvas CSS size vs actual size for high DPI displays
-            canvas.style.width = window.innerWidth + 'px';
-            canvas.style.height = window.innerHeight + 'px';
+            // Initialize variables
+            const fontSize = 14;
+            const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
+            const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const nums = '0123456789';
+            const binary = '01';
+            const hackSymbols = '①②③④⑤⑥⑦⑧⑨⑩⓪⊕⊗⊙⌖⌘⌥⎔⨁⨂≠≥≤∞√∛∜∫∬∭∮∯∰∱∲∳⋄⋆⋇⋈⋉⋊⋋⋌⋍⋎⋏⋐⋑';
+            const specialChars = '!@#$%^&*()_+-=[]{}|;:,./<>?';
+            const alphabet = katakana + latin + nums + binary + hackSymbols + specialChars;
             
-            // Scale the context to match
-            ctx.scale(dpr, dpr);
+            // Calculate columns
+            let columns = Math.floor(window.innerWidth / fontSize);
             
-            // Setup text rendering
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-        }
-        
-        // Initialize variables
-        const fontSize = 14;
-        const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-        const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        const nums = '0123456789';
-        const binary = '01';
-        const hackSymbols = '①②③④⑤⑥⑦⑧⑨⑩⓪⊕⊗⊙⌖⌘⌥⎔⨁⨂≠≥≤∞√∛∜∫∬∭∮∯∰∱∲∳⋄⋆⋇⋈⋉⋊⋋⋌⋍⋎⋏⋐⋑';
-        const specialChars = '!@#$%^&*()_+-=[]{}|;:,./<>?';
-        const alphabet = katakana + latin + nums + binary + hackSymbols + specialChars;
-        
-        // Calculate columns
-        const columns = Math.floor(window.innerWidth / fontSize);
-        
-        // Initialize arrays
-        const drops = [];
-        const chars = [];
-        const speeds = [];
-        const glows = [];
-        
-        // Initialize the arrays
-        function initMatrix() {
-            for (let i = 0; i < columns; i++) {
-                drops[i] = Math.random() * -100; // Start above the canvas (staggered)
-                speeds[i] = Math.random() * 0.5 + 0.5; // Different speeds
-                chars[i] = [];
-                glows[i] = Math.random() > 0.9; // Some columns will have glowing characters
-                
-                // Fill each column with characters
-                for (let j = 0; j < 100; j++) {
-                    chars[i][j] = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-                }
-            }
-        }
-        
-        // Main drawing function
-        function drawMatrix() {
-            // Create trail effect with semi-transparent black overlay
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            // Initialize arrays
+            const drops = [];
+            const chars = [];
+            const speeds = [];
+            const glows = [];
             
-            // For each column
-            for (let i = 0; i < columns; i++) {
-                // Get the position in the column
-                const y = Math.floor(drops[i]);
+            // Set up the canvas with proper device pixel ratio for crisp text
+            function setupCanvas() {
+                const dpr = window.devicePixelRatio || 1;
+                canvas.width = window.innerWidth * dpr;
+                canvas.height = window.innerHeight * dpr;
                 
-                // Draw trailing characters with fading effect
-                for (let j = 0; j < 20; j++) { // Increased trail length for more dramatic effect
-                    const currentY = y - j;
-                    if (currentY < 0) continue; // Skip if off-screen
-                    
-                    // Calculate different alpha values for trailing effect
-                    const alpha = 1 - (j / 20);
-                    
-                    // Mix up brightness for different characters in column
-                    if (j === 0) {
-                        // Leading character (white or bright green)
-                        if (glows[i] || Math.random() > 0.95) {
-                            ctx.fillStyle = '#ffffff'; // Occasional white character
-                            
-                            // Add extra glow effect for leading character
-                            ctx.shadowBlur = 15;
-                            ctx.shadowColor = '#00ff41';
-                        } else {
-                            ctx.fillStyle = '#00ff41'; // Bright green
-                            ctx.shadowBlur = 5;
-                            ctx.shadowColor = '#00ff41';
-                        }
-                    } else {
-                        // Trailing characters with fading green
-                        const green = Math.floor(255 * alpha * 0.8);
-                        ctx.fillStyle = `rgba(0, ${green}, 0, ${alpha})`;
-                        
-                        // Less glow for trailing characters
-                        ctx.shadowBlur = 0;
-                    }
-                    
-                    // Draw the character
-                    ctx.fillText(
-                        chars[i][currentY % chars[i].length], 
-                        i * fontSize + fontSize/2,  // Center in column
-                        currentY * fontSize + fontSize/2   // Center vertically
-                    );
-                    
-                    // Randomly change characters (more often for the leading character)
-                    if ((j === 0 && Math.random() > 0.9) || Math.random() > 0.99) {
-                        chars[i][currentY % chars[i].length] = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-                    }
-                }
+                // Scale canvas CSS size vs actual size for high DPI displays
+                canvas.style.width = window.innerWidth + 'px';
+                canvas.style.height = window.innerHeight + 'px';
                 
-                // Move drops down
-                drops[i] += speeds[i];
+                // Scale the context to match
+                ctx.scale(dpr, dpr);
                 
-                // Reset drop when it reaches bottom of screen
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.97) {
-                    drops[i] = 0;
-                    speeds[i] = Math.random() * 0.5 + 0.5; // Randomize speed when resetting
-                    glows[i] = Math.random() > 0.9; // Chance to get a glowing column
-                }
+                // Setup text rendering
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.font = `${fontSize}px monospace`;
             }
             
-            // Add occasional glitch effect
-            if (Math.random() > 0.995) {
-                // Horizontal lines
-                const lineCount = Math.floor(Math.random() * 3) + 1;
-                
-                for (let i = 0; i < lineCount; i++) {
-                    const y = Math.random() * canvas.height;
-                    const height = Math.random() * 3 + 1;
+            // Initialize the arrays
+            function initializeMatrix() {
+                for (let i = 0; i < columns; i++) {
+                    drops[i] = Math.random() * -100; // Start above the canvas (staggered)
+                    speeds[i] = Math.random() * 0.5 + 0.5; // Different speeds
+                    chars[i] = [];
+                    glows[i] = Math.random() > 0.9; // Some columns will have glowing characters
                     
-                    ctx.fillStyle = 'rgba(0, 255, 65, 0.8)';
-                    ctx.fillRect(0, y, canvas.width, height);
-                }
-            }
-            
-            // Use requestAnimationFrame for better performance
-            requestAnimationFrame(drawMatrix);
-        }
-        
-        // Handle window resize
-        function handleResize() {
-            setupCanvas();
-            const newColumns = Math.floor(window.innerWidth / fontSize);
-            
-            // If we need more columns than we have
-            if (newColumns > columns) {
-                // Keep current columns
-                const newDrops = [...drops];
-                const newChars = [...chars];
-                const newSpeeds = [...speeds];
-                const newGlows = [...glows];
-                
-                // Add columns
-                for (let i = columns; i < newColumns; i++) {
-                    newDrops[i] = Math.random() * -100;
-                    newSpeeds[i] = Math.random() * 0.5 + 0.5;
-                    newGlows[i] = Math.random() > 0.9;
-                    newChars[i] = [];
-                    
+                    // Fill each column with characters
                     for (let j = 0; j < 100; j++) {
-                        newChars[i][j] = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                        chars[i][j] = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                    }
+                }
+            }
+            
+            // Main drawing function
+            function drawMatrix() {
+                // Create trail effect with semi-transparent black overlay
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                
+                // For each column
+                for (let i = 0; i < columns; i++) {
+                    // Get the position in the column
+                    const y = Math.floor(drops[i]);
+                    
+                    // Draw trailing characters with fading effect
+                    for (let j = 0; j < 20; j++) { // Increased trail length for more dramatic effect
+                        const currentY = y - j;
+                        if (currentY < 0) continue; // Skip if off-screen
+                        
+                        // Calculate different alpha values for trailing effect
+                        const alpha = 1 - (j / 20);
+                        
+                        // Mix up brightness for different characters in column
+                        if (j === 0) {
+                            // Leading character (white or bright green)
+                            if (glows[i] || Math.random() > 0.95) {
+                                ctx.fillStyle = '#ffffff'; // Occasional white character
+                                
+                                // Add extra glow effect for leading character
+                                ctx.shadowBlur = 15;
+                                ctx.shadowColor = '#00ff41';
+                            } else {
+                                ctx.fillStyle = '#00ff41'; // Bright green
+                                ctx.shadowBlur = 5;
+                                ctx.shadowColor = '#00ff41';
+                            }
+                        } else {
+                            // Trailing characters with fading green
+                            const green = Math.floor(255 * alpha * 0.8);
+                            ctx.fillStyle = `rgba(0, ${green}, 0, ${alpha})`;
+                            
+                            // Less glow for trailing characters
+                            ctx.shadowBlur = 0;
+                        }
+                        
+                        // Draw the character
+                        ctx.fillText(
+                            chars[i][currentY % chars[i].length], 
+                            i * fontSize + fontSize/2,  // Center in column
+                            currentY * fontSize + fontSize/2   // Center vertically
+                        );
+                        
+                        // Randomly change characters (more often for the leading character)
+                        if ((j === 0 && Math.random() > 0.9) || Math.random() > 0.99) {
+                            chars[i][currentY % chars[i].length] = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                        }
+                    }
+                    
+                    // Move drops down
+                    drops[i] += speeds[i];
+                    
+                    // Reset drop when it reaches bottom of screen
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.97) {
+                        drops[i] = 0;
+                        speeds[i] = Math.random() * 0.5 + 0.5; // Randomize speed when resetting
+                        glows[i] = Math.random() > 0.9; // Chance to get a glowing column
                     }
                 }
                 
-                // Update arrays
-                drops.length = 0;
-                chars.length = 0;
-                speeds.length = 0;
-                glows.length = 0;
+                // Add occasional glitch effect
+                if (Math.random() > 0.995) {
+                    // Horizontal lines
+                    const lineCount = Math.floor(Math.random() * 3) + 1;
+                    
+                    for (let i = 0; i < lineCount; i++) {
+                        const y = Math.random() * canvas.height;
+                        const height = Math.random() * 3 + 1;
+                        
+                        ctx.fillStyle = 'rgba(0, 255, 65, 0.8)';
+                        ctx.fillRect(0, y, canvas.width, height);
+                    }
+                }
                 
-                // Copy new values
-                newDrops.forEach(d => drops.push(d));
-                newChars.forEach(c => chars.push(c));
-                newSpeeds.forEach(s => speeds.push(s));
-                newGlows.forEach(g => glows.push(g));
-            } 
-            // If we need less columns
-            else if (newColumns < columns) {
-                // Trim arrays
-                drops.length = newColumns;
-                chars.length = newColumns;
-                speeds.length = newColumns;
-                glows.length = newColumns;
+                // Use requestAnimationFrame for better performance
+                requestAnimationFrame(drawMatrix);
             }
-        }
+            
+            // Handle window resize
+            function handleResize() {
+                setupCanvas();
+                const newColumns = Math.floor(window.innerWidth / fontSize);
+                
+                // If we need more columns than we have
+                if (newColumns > columns) {
+                    // Keep current columns
+                    const newDrops = [...drops];
+                    const newChars = [...chars];
+                    const newSpeeds = [...speeds];
+                    const newGlows = [...glows];
+                    
+                    // Add columns
+                    for (let i = columns; i < newColumns; i++) {
+                        newDrops[i] = Math.random() * -100;
+                        newSpeeds[i] = Math.random() * 0.5 + 0.5;
+                        newGlows[i] = Math.random() > 0.9;
+                        newChars[i] = [];
+                        
+                        for (let j = 0; j < 100; j++) {
+                            newChars[i][j] = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                        }
+                    }
+                    
+                    // Update arrays
+                    drops.length = 0;
+                    chars.length = 0;
+                    speeds.length = 0;
+                    glows.length = 0;
+                    
+                    // Copy new values
+                    newDrops.forEach(d => drops.push(d));
+                    newChars.forEach(c => chars.push(c));
+                    newSpeeds.forEach(s => speeds.push(s));
+                    newGlows.forEach(g => glows.push(g));
+                    
+                    // Update columns count
+                    columns = newColumns;
+                } 
+                // If we need less columns
+                else if (newColumns < columns) {
+                    // Trim arrays
+                    drops.length = newColumns;
+                    chars.length = newColumns;
+                    speeds.length = newColumns;
+                    glows.length = newColumns;
+                    
+                    // Update columns count
+                    columns = newColumns;
+                }
+            }
+            
+            // Initialize everything
+            setupCanvas();
+            initializeMatrix();
+            
+            // Start the animation
+            requestAnimationFrame(drawMatrix);
+            
+            // Handle resize properly
+            window.addEventListener('resize', handleResize);
+        };
         
-        // Initialize and start animation
-        setupCanvas();
-        initMatrix();
-        ctx.font = `${fontSize}px monospace`;
-        
-        // Start the animation
-        requestAnimationFrame(drawMatrix);
-        
-        // Handle resize properly
-        window.addEventListener('resize', handleResize);
+        // Load matrix effect after the page loads
+        window.addEventListener('load', initMatrixEffect);
     </script>
 
-</html>
+</html>v
