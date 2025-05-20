@@ -398,36 +398,47 @@
     <div class="scanline"></div>
     
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">Châu Anh Dũng</a>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link neon-text-blue">Home</a>
-                    <a href="#about" class="nav-link neon-text-pink">About</a>
-                    <a href="#skills" class="nav-link neon-text-purple">Skills</a>
-                    <a href="#projects" class="nav-link neon-text-blue">Projects</a>
-                    <a href="#experience" class="nav-link neon-text-pink">Experience</a>
-                    <a href="#contact" class="nav-link neon-text-purple">Contact</a>
-                </div>
-                
-                <button id="mobile-menu-button" class="md:hidden text-xl neon-text-blue">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
-                <a href="#home" class="block nav-link neon-text-blue">Home</a>
-                <a href="#about" class="block nav-link neon-text-pink">About</a>
-                <a href="#skills" class="block nav-link neon-text-purple">Skills</a>
-                <a href="#projects" class="block nav-link neon-text-blue">Projects</a>
-                <a href="#experience" class="block nav-link neon-text-pink">Experience</a>
-                <a href="#contact" class="block nav-link neon-text-purple">Contact</a>
-            </div>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        
+        <!-- Logo + Tên + Chữ Cybersecurity -->
+        <div class="flex items-center space-x-4">
+          <img src="images/logo.png" alt="Logo" class="w-10 h-10 object-contain" />
+          <div class="leading-tight">
+            <div class="text-2xl font-bold neon-text-blue glow-hover">Châu Anh Dũng</div>
+            <div class="text-xs text-gray-300 tracking-wide">Cybersecurity</div>
+          </div>
         </div>
-    </nav>
+  
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link neon-text-blue">Home</a>
+          <a href="#about" class="nav-link neon-text-pink">About</a>
+          <a href="#skills" class="nav-link neon-text-purple">Skills</a>
+          <a href="#projects" class="nav-link neon-text-blue">Projects</a>
+          <a href="#experience" class="nav-link neon-text-pink">Experience</a>
+          <a href="#contact" class="nav-link neon-text-purple">Contact</a>
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-xl neon-text-blue">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+  
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+        <a href="#home" class="block nav-link neon-text-blue">Home</a>
+        <a href="#about" class="block nav-link neon-text-pink">About</a>
+        <a href="#skills" class="block nav-link neon-text-purple">Skills</a>
+        <a href="#projects" class="block nav-link neon-text-blue">Projects</a>
+        <a href="#experience" class="block nav-link neon-text-pink">Experience</a>
+        <a href="#contact" class="block nav-link neon-text-purple">Contact</a>
+      </div>
+    </div>
+  </nav>
+  
     
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
