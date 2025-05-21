@@ -1,7 +1,8 @@
 # Châu Anh Dũng | Red Team Specialist in Training ⚔️ | Cyber AI Visionary 💡
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa8563e632d2f16e178501ec/media/badge.svg)](https://github.com/sindresorhus/awesome)
-[![Website](https://img.shields.io/badge/Website-chauanhdung.id.vn-brightgreen)](https://chauanhdung.id.vn)
+[![Awesome](https://img.shields.io/badge/awesome-%23121011.svg?style=flat&logo=github&logoColor=white)](https://github.com/sindresorhus/awesome)
+[![Website](https://img.shields.io/badge/Website-chauanhdung.id.vn-brightgreen?style=flat-square)](https://chauanhdung.id.vn)
+
 
 Welcome to the digital command center 🚀 of Châu Anh Dũng! This isn't just a resume; it's a manifesto of my journey to become a top-tier Red Teamer, a pioneer in Cyber AI, and a tech-savvy disruptor.
 
