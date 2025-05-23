@@ -9,8 +9,8 @@
     <meta name="theme-color" content="#0a0a12">
     <title>Châu Anh Dũng | Cyber Security Student</title>
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwZmYwZmMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgMjJzOC04IDgtMTRhOCA4IDAgMSAwLTE2IDBjMCA2IDggMTQgOCAxNHoiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjhpIiByPSIzIj48L2NpcmNsZT48L3N2Zz4=">
-    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwZmYwZmMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48cGF0aCBkPSJNMTIgMjJzOC04IDgtMTRhOCA4IDAgMSAwLTE2IDBjMCA2IDggMTQgOCAxNHoiPjwvcGF0aD48Y2lyY2xlIGN4PSIxMiIgY3k9IjhpIiByPSIzIj48L2NpcmNsZT48L3N2Zz4=">
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="logo.svg">
     
     <!-- Critical CSS first -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -33,6 +33,21 @@
             --dark-bg: #0a0a12;
             --darker-bg: #050508;
             --terminal-green: #00ff41;
+        }
+        
+        /* Custom class for the logo header */
+        .logo-header {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue), inset 0 0 8px var(--neon-blue);
+            border-radius: 6px;
+            padding: 10px 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .logo-header:hover {
+            box-shadow: 0 0 20px var(--neon-blue), inset 0 0 12px var(--neon-blue);
+            background-color: rgba(15, 240, 252, 0.1);
         }
         
         body {
@@ -398,36 +413,47 @@
     <div class="scanline"></div>
     
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">Châu Anh Dũng</a>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link neon-text-blue">Home</a>
-                    <a href="#about" class="nav-link neon-text-pink">About</a>
-                    <a href="#skills" class="nav-link neon-text-purple">Skills</a>
-                    <a href="#projects" class="nav-link neon-text-blue">Projects</a>
-                    <a href="#experience" class="nav-link neon-text-pink">Experience</a>
-                    <a href="#contact" class="nav-link neon-text-purple">Contact</a>
-                </div>
-                
-                <button id="mobile-menu-button" class="md:hidden text-xl neon-text-blue">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
-                <a href="#home" class="block nav-link neon-text-blue">Home</a>
-                <a href="#about" class="block nav-link neon-text-pink">About</a>
-                <a href="#skills" class="block nav-link neon-text-purple">Skills</a>
-                <a href="#projects" class="block nav-link neon-text-blue">Projects</a>
-                <a href="#experience" class="block nav-link neon-text-pink">Experience</a>
-                <a href="#contact" class="block nav-link neon-text-purple">Contact</a>
-            </div>
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-lg">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        
+        <!-- Logo + Tên + Chữ Cybersecurity -->
+        <a href="javascript:location.reload()" class="flex items-center logo-header">
+          <img src="logo.svg" alt="Châu Anh Dũng" class="w-12 h-12 object-contain mr-4" />
+          <div class="leading-snug text-center w-full">
+            <div class="text-2xl font-bold neon-text-blue">Châu Anh Dũng</div>
+            <div class="text-sm terminal-text tracking-wide">Cybersecurity Student</div>
+          </div>
+        </a>
+  
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link neon-text-blue">Home</a>
+          <a href="#about" class="nav-link neon-text-pink">About</a>
+          <a href="#skills" class="nav-link neon-text-purple">Skills</a>
+          <a href="#projects" class="nav-link neon-text-blue">Projects</a>
+          <a href="#experience" class="nav-link neon-text-pink">Experience</a>
+          <a href="#contact" class="nav-link neon-text-purple">Contact</a>
         </div>
-    </nav>
+  
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-xl neon-text-blue">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+  
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+        <a href="#home" class="block nav-link neon-text-blue">Home</a>
+        <a href="#about" class="block nav-link neon-text-pink">About</a>
+        <a href="#skills" class="block nav-link neon-text-purple">Skills</a>
+        <a href="#projects" class="block nav-link neon-text-blue">Projects</a>
+        <a href="#experience" class="block nav-link neon-text-pink">Experience</a>
+        <a href="#contact" class="block nav-link neon-text-purple">Contact</a>
+      </div>
+    </div>
+  </nav>
+  
     
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -443,7 +469,7 @@
             </h1>
             
             <p class="text-xl md:text-2xl mb-8 terminal-text">
-                Cybersecurity Student | VNNIC Trainee | Samsung Innovation Campus AI Student
+                Cybersecurity Student | Ethical Hacking | Future Red Teamer
             </p>
             
             <div class="flex justify-center space-x-4">
@@ -883,7 +909,7 @@
                         <div class="timeline-item">
                             <div class="neon-border-blue bg-black bg-opacity-50 p-6 rounded-lg">
                                 <h4 class="text-lg font-bold neon-text-blue mb-2">BSc in Cybersecurity</h4>
-                                <p class="terminal-text mb-2">Duy Tan University, Da Nang | 2025 - Present</p>
+                                <p class="terminal-text mb-2">Duy Tan University, Da Nang | 2024 - Present</p>
                                 <p class="text-gray-300">
                                     Studying cybersecurity with a focus on offensive security techniques, network protocols, and system administration.
                                 </p>
@@ -1026,7 +1052,7 @@
     <footer class="py-8 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center mb-6">
-                <a href="#home" class="text-2xl font-bold neon-text-blue glow-hover">Châu Anh Dũng</a>
+                <a href="#home" class="text-2xl font-bold neon-text-blue">Châu Anh Dũng</a>
             </div>
             
             <div class="flex justify-center space-x-6 mb-6">
@@ -1084,8 +1110,8 @@
         const typingText = document.getElementById('typing-text');
         const phrases = [
             "Châu Anh Dũng",
-            "Security Student",
-            "White Hat Aspirant",
+            "Cybersecurity Student",
+            "Ethical Hacking",
             "Future Red Teamer"
         ];
         let phraseIndex = 0;
